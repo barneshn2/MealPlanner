@@ -21,7 +21,7 @@ public class Addaplan extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 mEdit   = (EditText)findViewById(R.id.editTextTextPersonName);
-
+                String plan = mEdit.getText().toString();
             }
         });
     }
