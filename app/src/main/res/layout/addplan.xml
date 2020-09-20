@@ -13,7 +13,7 @@
         android:layout_marginBottom="126dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/plan_description"
+        android:hint="Title"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
