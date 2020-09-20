@@ -3,5 +3,6 @@
     <string name="plan_description">Plan description</string>
     <string name="testbutton">TestButton</string>
     <string name="button">Button</string>
+    <string name="title">Title</string>
 
 </resources>
