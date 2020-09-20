@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GROUP L</string>
+    <string name="plan_description">Plan description</string>
+    <string name="testbutton">TestButton</string>
+    <string name="button">Button</string>
 
 </resources>
