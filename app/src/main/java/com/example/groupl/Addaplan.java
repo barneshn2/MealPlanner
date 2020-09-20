@@ -12,7 +12,7 @@ public class Addaplan extends AppCompatActivity {
     // creates the instances
     Button mButton;
     EditText mEdit;
-    TextView mText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
