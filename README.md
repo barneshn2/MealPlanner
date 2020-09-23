@@ -1,5 +1,6 @@
 # MealPlanner
-Meal Planning Application CMSC 355
+CMSC 355
+Meal Planning Application
 Shiza Khan
 Hailey Barnes
 Trevon Lamb
