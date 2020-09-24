@@ -4,4 +4,4 @@ Meal Planning Application
 Shiza Khan
 Hailey Barnes!!!
 Trevon Lamb
-Sabrina Khan
+Sabrina Khan  
