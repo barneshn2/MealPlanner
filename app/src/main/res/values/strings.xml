@@ -4,5 +4,7 @@
     <string name="testbutton">TestButton</string>
     <string name="button">Button</string>
     <string name="title">Title</string>
+    <string name="add_a_plan">Add a plan</string>
+    <string name="delete_a_plan">Delete a plan</string>
 
 </resources>
