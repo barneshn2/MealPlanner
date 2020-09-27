@@ -15,11 +15,13 @@ public class Addaplan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addaplan);
-
+        //setContentView(R.layout.activity_addaplan);
+        setContentView(R.layout.addplan);
         Intent intent = getIntent();
 
-        // get all the variables from a button click
+      /* Commenting code out  causing run time errors
+
+       // get all the variables from a button click
         Button mButton = (Button) findViewById(R.id.button3);
         mButton.setOnClickListener(new View.OnClickListener() {
             // on a click it will act
@@ -49,7 +51,7 @@ public class Addaplan extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
 
     }
 

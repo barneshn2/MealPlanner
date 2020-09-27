@@ -6,5 +6,7 @@
     <string name="title">Title</string>
     <string name="add_a_plan">Add a plan</string>
     <string name="delete_a_plan">Delete a plan</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="selected_recipes">Selected Recipes</string>
 
 </resources>
