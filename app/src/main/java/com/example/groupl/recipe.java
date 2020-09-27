@@ -1,41 +1,35 @@
 package com.example.groupl;
 
 import java.util.ArrayList;
-import java.util.List;
-
 public class recipe {
     // class variables
     String recipeName;
-    ArrayList<String> ingredientsList = new ArrayList<>();
-
-    // recipe constructor
-    public recipe() {
+    ArrayList<String> ingredients = new ArrayList();
+    // default constructor
+    public recipe () {
+        this.recipeName = "Untitled Recipe";
+        this.ingredients = ingredients;
     }
-
-    // Set recipe name
-    public void setRecipeName(String recipeNameGiven){
-        recipeName = recipeNameGiven;
+    // parameterized constructor
+    public recipe (String recipeName, ArrayList<String> ingredientList) {
+        this.recipeName = recipeName;
+        this.ingredients = ingredientList;
     }
-
-    // Add ingredient to list
-    public void addIngredient (String ingredient){
-        ingredientsList.add(ingredient);
+    // getters and setters
+    public void setRecipeName (String recipeNameRecieved){
+        recipeName = recipeNameRecieved;
     }
-
-    // remove ingredient with name as parameter
-    public void removeingredientNamed (String ingredient){
-        ingredientsList.remove(ingredient);
+    public void addIngredient(String ingredient){
+        ingredients.add(ingredient);
     }
-
-    // remove ingredient at index as parameter
-    public void removeingredientAt (String ingredient){
-        ingredientsList.remove(ingredient);
+    public void removeIngredientName(String ingredient){
+        ingredients.remove(ingredient);
     }
-
-    // remove all ingredients
+    public void removeIngredientIndex(int index){
+        ingredients.remove(index);
+    }
     public void clearIngredients (){
-        ingredientsList.clear();
+        ingredients.clear();
     }
-
 
 }
