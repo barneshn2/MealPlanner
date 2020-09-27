@@ -1,17 +1,17 @@
 package com.example.groupl;
 
 import java.util.ArrayList;
-public class recipe {
+public class Recipe {
     // class variables
     String recipeName;
     ArrayList<String> ingredients = new ArrayList();
     // default constructor
-    public recipe () {
+    public Recipe() {
         this.recipeName = "Untitled Recipe";
         this.ingredients = ingredients;
     }
     // parameterized constructor
-    public recipe (String recipeName, ArrayList<String> ingredientList) {
+    public Recipe(String recipeName, ArrayList<String> ingredientList) {
         this.recipeName = recipeName;
         this.ingredients = ingredientList;
     }
