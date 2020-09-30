@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         recipeName = findViewById(R.id.recipename);
         ingredientName = findViewById(R.id.ingredientName);
         ingredientadd = findViewById(R.id.ingredientAdd);
-        recipeSavebutton = findViewById(R.id.recipeSave);
     }
 
     public void AddaPlan(View view) {
