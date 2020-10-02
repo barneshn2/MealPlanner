@@ -56,7 +56,8 @@ public class Addaplan extends AppCompatActivity {
     }
 
 
-
-
-
+    public void backbtn(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
