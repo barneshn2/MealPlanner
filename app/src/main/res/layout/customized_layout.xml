@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_custom_calender"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:background="@mipmap/vegi">
+        <ImageButton
+            android:id="@+id/PreviousBtn"
+            android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:background=""
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="CurrentDate"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_weight="3"/>
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="37dp"
+            android:layout_height="30dp"
+            android:background=""
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sun"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SAT"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FRI"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="THR"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="WED"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TUE"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="MON"
+            android:background="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridview"
+        android:numColumns="7"></GridView>
+
+
+
