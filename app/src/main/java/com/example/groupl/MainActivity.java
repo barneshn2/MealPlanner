@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.calendarView);
         recipeName = findViewById(R.id.recipename);
         ingredientName = findViewById(R.id.ingredientName);
-        ingredientadd = findViewById(R.id.ingredientAdd);
+        ingredientadd = findViewById(R.id.addIngredient);
     }
 
     public void AddaPlan(View view) {

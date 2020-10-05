@@ -8,5 +8,6 @@
     <string name="delete_a_plan">Delete a plan</string>
     <string name="recipe_name">Recipe Name</string>
     <string name="selected_recipes">Selected Recipes</string>
+    <string name="add_ingredient">Add Ingredient</string>
 
 </resources>

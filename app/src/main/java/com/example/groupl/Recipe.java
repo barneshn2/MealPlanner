@@ -32,4 +32,8 @@ public class Recipe {
         ingredients.clear();
     }
 
+    public ArrayList getIngredients () {
+        return ingredients;
+    }
+
 }
