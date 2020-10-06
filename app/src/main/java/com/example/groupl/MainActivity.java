@@ -29,5 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void DeleteaPlan(View view) {
     }
+
+    public void recip(View view) {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+
+    }
 }
 

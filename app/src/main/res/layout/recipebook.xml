@@ -6,47 +6,40 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:ems="10"
         android:hint="Ingreident Name"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Add"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="27dp"
+        android:onClick="Addd"
         android:text="Add"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toEndOf="@+id/input"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="156dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Recipe Name"
+        app:layout_constraintBottom_toTopOf="@+id/VV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="54dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
         android:id="@+id/button5"
@@ -77,4 +70,14 @@
         android:text="Clear all"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/VV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="114dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
