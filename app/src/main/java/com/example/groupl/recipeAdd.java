@@ -1,8 +1,6 @@
 package com.example.groupl;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AlertDialogLayout;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,9 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class recipeAdd extends AppCompatActivity {
@@ -23,6 +19,7 @@ public class recipeAdd extends AppCompatActivity {
     EditText ingredientName;
     Button addIngredient;
     ArrayList ingredientList;
+    ArrayList recipeBook;
     ArrayAdapter<Recipe> adapter;
     ListView myList;
 
@@ -38,12 +35,6 @@ public class recipeAdd extends AppCompatActivity {
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, ingredientList);
         myList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-    }
-
-    public void saveAll() {
-        // maybe add if statement for default string
-       myRecipe.setRecipeName(recipeName.getText().toString());
-       // TODO: how to save to device memory
     }
 
     public void removeIngredient(String ingredient) {
@@ -86,5 +77,8 @@ public class recipeAdd extends AppCompatActivity {
         }
     }
 
-
+    public void saveToRecipeBook(View view) {
+        recipeBook.add(myRecipe);
+        SaveRetrieveFromPrefs.saveToRecipeBook(getApplicationContext(),recipeBook);
+    }
 }
