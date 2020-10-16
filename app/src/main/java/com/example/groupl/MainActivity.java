@@ -43,5 +43,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1 = new Intent(this, recipeAdd.class);
         startActivity(intent1);
     }
+
+    public void RecipeBook (View view){
+        Intent intent = new Intent(this, MyrecipeBook.class);
+        intent.putExtra("methodName","myMethod");
+        startActivity(intent);
+    }
 }
 

@@ -21,6 +21,7 @@ public class SaveRetrieveFromPrefs {
         editor.apply();
     }
 
+    // Returning the list of recipes
     public static ArrayList<Recipe> readRecipeBookFromPrefs(Context context){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         String jsonString = pref.getString(LIST_KEY,"");

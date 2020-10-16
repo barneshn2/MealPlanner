@@ -19,7 +19,7 @@ public class recipeAdd extends AppCompatActivity {
     EditText ingredientName;
     Button addIngredient;
     ArrayList ingredientList;
-    ArrayList recipeBook;
+    public static ArrayList<Recipe> recipeBook;
     ArrayAdapter<Recipe> adapter;
     ListView myList;
 
@@ -80,5 +80,9 @@ public class recipeAdd extends AppCompatActivity {
     public void saveToRecipeBook(View view) {
         recipeBook.add(myRecipe);
         SaveRetrieveFromPrefs.saveToRecipeBook(getApplicationContext(),recipeBook);
+    }
+
+    public static ArrayList<Recipe> getRecipeBook(){
+        return recipeBook;
     }
 }
