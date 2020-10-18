@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/input"
+        android:id="@+id/getIngreidentsName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -24,11 +24,11 @@
         android:layout_marginTop="27dp"
         android:onClick="Addd"
         android:text="Add"
-        app:layout_constraintStart_toEndOf="@+id/input"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toEndOf="@id/getIngreidentsName"
+        app:layout_constraintTop_toBottomOf="@id/getRecipeName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/getRecipeName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -47,13 +47,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginBottom="37dp"
-        android:onClick="Bakbtn"
+        android:onClick="Bakbtnn"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="37dp"
-        android:text="Clear all"
+        android:text="Delete Recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -79,5 +79,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@id/getRecipeName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
