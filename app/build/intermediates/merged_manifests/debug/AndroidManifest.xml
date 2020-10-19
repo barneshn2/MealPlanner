@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.groupl.MainActivity2" />
+        <activity android:name="com.example.groupl.ShowAllRecipes" />
+        <activity android:name="com.example.groupl.AddNewRecipe" />
+        <activity android:name="com.example.groupl.EditRecipe" />
         <activity android:name="com.example.groupl.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
