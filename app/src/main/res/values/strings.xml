@@ -8,5 +8,11 @@
     <string name="delete_a_plan">Delete a plan</string>
     <string name="recipe_name">Recipe Name</string>
     <string name="selected_recipes">Selected Recipes</string>
+    <string name="create_a_new_meal_plan">Create a new Meal Plan</string>
+    <string name="select_a_date_range_mm_dd_yyyy">Select a date range (mm/dd/yyyy)</string>
+    <string name="begin">begin</string>
+    <string name="end">end</string>
+    <string name="choose_recipes">Choose recipes</string>
+    <string name="save_plan">Save Plan</string>
 
 </resources>
