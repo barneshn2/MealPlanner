@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String Sql = "CREATE TABLE IF NOT EXISTS "
                 + TableName + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + C2 + " text )";
+                + C2 + " text ,"+C4+" INTEGER)";
 
         String Sql2 = "CREATE TABLE IF NOT EXISTS "
                 + TableName2 + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
