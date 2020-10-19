@@ -4,16 +4,20 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+// TODO: Review this with Karim --> Confused on C1 -> C4 what is it?
 public class DBHelper extends SQLiteOpenHelper {
-    public static String TableName="RacpiTable";
-    public static String TableName2="IngriendensTable";
-    public static String C1="id";
-    public static String C2="name";
-    public static String C3="r_id";
-    public static String C4="date";
+    public static String RecipeTable ="RacpiTable";
+    public static String ingredieantsTable ="IngriendensTable";
+    public static String PlanTable="PlanTable";
+    public static String C1="id"; // id for Recipe Table
+    public static String C2="name"; // recipe name
+    public static String C3="r_id"; // ingredieant id (foreign key)??????
+    public static String C4="date"; // date recipe added
+    public static String C5="plan_id"; // id for Plan table
+
 
     public DBHelper(Context context){
-        super(context, TableName,null,3);
+        super(context, RecipeTable,null,4);
     }
 
 
@@ -22,14 +26,21 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
         String Sql = "CREATE TABLE IF NOT EXISTS "
-                + TableName + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                // (PrimaryKey, recipeName, date)
+                + RecipeTable + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + C2 + " text ,"+C4+" INTEGER)";
 
         String Sql2 = "CREATE TABLE IF NOT EXISTS "
-                + TableName2 + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                // recipePrimaryKey (foreign Key), recipeName,
+                + ingredieantsTable + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + C2 + " text ,"+ C3 +" INTEGER )";
 
+        // create the plan table (UID, Recipe_ID (Foreign key), recipeName)
+        String Sql3 = "CREATE TABLE IF NOT EXISTS "
+                + PlanTable + "(" +  C5 + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + C1 + " INTEGER )";
 
+        db.execSQL(Sql3);
         db.execSQL(Sql2);
         db.execSQL(Sql);
 
@@ -39,9 +50,10 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        String Sql="ALTER TABLE "+ TableName+"  ADD "+C4+" INTEGER";
+        String Sql="ALTER TABLE "+ RecipeTable +"  ADD "+C4+" INTEGER"; // add ingrediants to recipe table
+        String SQL_AddRecipeToPlan="ALTER TABLE "+ PlanTable +"  ADD "+C1+" INTEGER"; // add recipes to plan table
 
         db.execSQL(Sql);
-
+        db.execSQL(SQL_AddRecipeToPlan);
     }
 }
