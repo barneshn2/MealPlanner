@@ -27,6 +27,7 @@ public class EditRecipe extends AppCompatActivity {
     EditText getIngreidentsName;
     DBManger DB;
     Recipe recipe;
+    Button Delete;
     @Override
 
 
@@ -45,7 +46,8 @@ public class EditRecipe extends AppCompatActivity {
 
         getRecipeName = (EditText) findViewById(R.id.getRecipeName);
         getRecipeName.setText(recipe.getName());
-
+        Delete = (Button) findViewById(R.id.DeleteRecipe);
+        Delete.setVisibility(View.VISIBLE);
         Adding = (Button) findViewById(R.id.Add);
         save = (Button) findViewById(R.id.Save);
         addedItems =(ListView) findViewById(R.id.VV);

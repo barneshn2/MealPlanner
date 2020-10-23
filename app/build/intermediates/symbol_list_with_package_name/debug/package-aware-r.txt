@@ -1224,6 +1224,7 @@ id ALT
 id Add
 id Bck
 id CTRL
+id DeleteRecipe
 id FUNCTION
 id META
 id NO_DEBUG
@@ -1312,7 +1313,6 @@ id button2
 id button3
 id button4
 id button5
-id button7
 id button8
 id buttonPanel
 id calendarView

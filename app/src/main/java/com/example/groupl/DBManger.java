@@ -129,9 +129,11 @@ public class DBManger {
 
     }
 
-    //private void deleteRecipe(int id){
+    public void deleteRecipe(int id){
+        db.delete(DBHelper.TableName,DBHelper.C1+"="+id,null);
+        db.delete(DBHelper.TableName2,DBHelper.C3+"="+id,null);
 
-    //}
+    }
 
 
 
