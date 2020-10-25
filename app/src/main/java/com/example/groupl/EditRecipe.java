@@ -97,11 +97,22 @@ public class EditRecipe extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
+        Delete.setOnClickListener(new View.OnClickListener() { //for next commit
+            @Override
+            public void onClick(View view) {
+                DeleteRecipe();
+            }
+        });
 
     }
+    private void DeleteRecipe(){
+        DB.deleteRecipe(recipe.getId());
+        findViewById(R.id.button5).callOnClick();
+    }
+
+
+
+
 
     public void Bakbtnn(View view) {
         Intent itent = new Intent(this, ShowAllRecipes.class);
