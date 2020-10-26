@@ -1224,14 +1224,17 @@ id ALT
 id Add
 id CTRL
 id FUNCTION
+id GetRecipes
 id META
 id NO_DEBUG
+id RecipeBook_recipes
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Save
+id SavechangesRBook
 id VV
 id accelerate
 id accessibility_action_clickable_span
@@ -1313,7 +1316,6 @@ id button4
 id button5
 id button7
 id button8
-id button9
 id buttonPanel
 id calendarView
 id center
@@ -1323,6 +1325,7 @@ id chain
 id chains
 id checkbox
 id checked
+id chooseRecipeBtn
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1517,6 +1520,8 @@ id textStart
 id textView
 id textView2
 id textView3
+id textView4
+id textView5
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1604,8 +1609,10 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_main2
+layout activity_myrecipebook
 layout add_new_recipe
 layout addplan
+layout choose_recipe_for_plan
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1666,6 +1673,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string add_a_plan
+string addrecipetoplan
 string app_name
 string appbar_scrolling_view_behavior
 string begin
@@ -1681,6 +1689,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string mtrl_chip_close_icon_content_description
+string name
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string password_toggle_content_description
@@ -1696,6 +1705,7 @@ string select_a_date_range_mm_dd_yyyy
 string selected_recipes
 string status_bar_notification_info_overflow
 string testbutton
+string textview
 string title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

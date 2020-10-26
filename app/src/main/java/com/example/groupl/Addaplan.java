@@ -5,60 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class Addaplan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_addaplan);
         setContentView(R.layout.addplan);
         Intent intent = getIntent();
-
-      /* Commenting code out  causing run time errors
-
-       // get all the variables from a button click
-        Button mButton = (Button) findViewById(R.id.button3);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            // on a click it will act
-            public void onClick(View view) {
-
-                // Is the button now checked?
-                boolean checked = ((RadioButton) view).isChecked();
-
-                // find the plan user text input
-                final EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
-                String plan = editText.getText().toString();
-
-                //use a switch case to find which button was selected
-                switch(view.getId()) {
-                    case R.id.Breakfast:
-                        if (checked)
-                            // if breakfast is selected
-                            break;
-                    case R.id.Lunch:
-                        if (checked)
-                            // if lunch is selected
-                            break;
-                    case R.id.Dinner:
-                        if (checked)
-                            //if dinner is selected
-                            break;
-
-                }
-            }
-        });*/
-
     }
 
-
-    public void backbtn(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void Bakbtn(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    public void getRecipestoAdd(View view) {
+        Intent i = new Intent(this, Myrecipebook.class);
+        startActivity(i);
     }
 }
