@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_new_recipe.xml.flat",
-        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\layout\\add_new_recipe.xml"
-    },
-    {
         "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_app.png.flat",
         "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\drawable-v24\\app.png"
+    },
+    {
+        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_new_recipe.xml.flat",
+        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\layout\\add_new_recipe.xml"
     },
     {
         "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.jpg.flat",

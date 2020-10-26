@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static String C2="name"; // recipe name
     public static String C3="r_id"; // ingredieant id (foreign key)??????
     public static String C4="date"; // date recipe added
-    public static String C5="plan_id"; // id for Plan table
+    public static String C5= "recipeID"; // recipe tables primary key
 
 
     public DBHelper(Context context){
@@ -35,10 +35,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 + ingredieantsTable + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + C2 + " text ,"+ C3 +" INTEGER )";
 
-        // create the plan table (UID, Recipe_ID (Foreign key), recipeName)
+        // create the plan table (plan primary key, name of plan, Recipe_ID (Foreign key))
         String Sql3 = "CREATE TABLE IF NOT EXISTS "
-                + PlanTable + "(" +  C5 + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + C1 + " INTEGER )";
+                + PlanTable + "(" +  C1  +  " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + C2 + " text ," + C5+ " INTEGER )";
 
         db.execSQL(Sql3);
         db.execSQL(Sql2);
@@ -51,7 +51,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         String Sql="ALTER TABLE "+ RecipeTable +"  ADD "+C4+" INTEGER"; // add ingrediants to recipe table
-        String SQL_AddRecipeToPlan="ALTER TABLE "+ PlanTable +"  ADD "+C1+" INTEGER"; // add recipes to plan table
+        String SQL_AddRecipeToPlan="ALTER TABLE "+ PlanTable +"  ADD "+C5+" INTEGER"; // add recipes to plan table
 
         db.execSQL(Sql);
         db.execSQL(SQL_AddRecipeToPlan);
