@@ -17,9 +17,8 @@ public class DBManger {
     public DBManger(Context ctx) {
         DBHelper helper = new DBHelper(ctx);
         db = helper.getReadableDatabase();
-
-
     }
+    // insert into recipe table
     public void insertRecpiToDataBase(Recipe r) {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
@@ -45,7 +44,7 @@ public class DBManger {
         return id;
         }
 
-
+// insert into ingrediants table
     public boolean insertIngToDataBase(Ingredients r) {
 
         ContentValues values = new ContentValues();
@@ -128,14 +127,19 @@ public class DBManger {
 
     private void deleteIngrad(int id ){
           boolean b=db.delete(DBHelper.ingredieantsTable, DBHelper.C3 + "=" + id, null) > 0;
-
     }
 
-    //private void deleteRecipe(int id){
-
-    //}
-
-
+    // insert into Plan table
+    public boolean insertPlansToDataBase(Plan p) {
+        ContentValues values = new ContentValues();
+        values.put(DBHelper.C2, p.getContent());
+        values.put(DBHelper.C5, p.getrID());
+        return db.insert(DBHelper.PlanTable, null, values) > -1;
+    }
+    // Delete from plan table
+    private void deleteRecipe(int id ){
+        boolean b=db.delete(DBHelper.PlanTable, DBHelper.C5 + "=" + id, null) > 0;
+    }
 
 
 }

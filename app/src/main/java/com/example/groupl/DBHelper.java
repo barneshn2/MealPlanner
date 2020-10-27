@@ -4,12 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// TODO: Review this with Karim --> Confused on C1 -> C4 what is it?
+
 public class DBHelper extends SQLiteOpenHelper {
     public static String RecipeTable ="RacpiTable";
     public static String ingredieantsTable ="IngriendensTable";
     public static String PlanTable="PlanTable";
-    public static String C1="id"; // id for Recipe Table
+    public static String C1="id"; // Primary keys
     public static String C2="name"; // recipe name
     public static String C3="r_id"; // ingredieant id (foreign key)??????
     public static String C4="date"; // date recipe added
