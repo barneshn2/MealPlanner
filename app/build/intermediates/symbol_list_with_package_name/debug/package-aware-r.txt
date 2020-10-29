@@ -1226,12 +1226,14 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id RecipeBook_recipes
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Save
+id SavechangesRBook
 id VV
 id accelerate
 id accessibility_action_clickable_span
@@ -1517,6 +1519,7 @@ id textStart
 id textView
 id textView2
 id textView3
+id textView4
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1604,6 +1607,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_main2
+layout activity_myrecipebook
 layout add_new_recipe
 layout addplan
 layout custom_dialog
