@@ -21,13 +21,6 @@ public class UnitTests {
         assertEquals(mySum.sum(10, 2), 12);
     }
 
-    @Test
-    public void sum_isInCorrect(){
-        Sum mySum = new Sum();
-        assertEquals(mySum.sum(10, 2), 8);
-
-    }
-
 
     @Test
     public void multiply_isCorrect(){
@@ -35,9 +28,4 @@ public class UnitTests {
         assertEquals(mySum.multiply(10, 2), 20);
     }
 
-    @Test
-    public void multiply_isInCorrect(){
-        Sum mySum = new Sum();
-        assertEquals(mySum.multiply(10, 2), 22);
-    }
 }
