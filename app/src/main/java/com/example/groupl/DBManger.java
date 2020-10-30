@@ -107,7 +107,6 @@ public class DBManger {
             cursor.moveToNext();
             Log.e("Test Ingreidents ",i.getContent()+ i.getId());
         }
-
         cursor.close();
         return ret;
     }
