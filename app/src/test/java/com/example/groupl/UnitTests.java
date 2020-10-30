@@ -25,6 +25,7 @@ public class UnitTests {
     public void sum_isInCorrect(){
         Sum mySum = new Sum();
         assertEquals(mySum.sum(10, 2), 8);
+
     }
 
 
