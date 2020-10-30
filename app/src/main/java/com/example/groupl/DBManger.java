@@ -132,8 +132,8 @@ public class DBManger {
     }
 
     public void deleteRecipe(int id){
-        db.delete(DBHelper.TableName,DBHelper.C1+"="+id,null);
-        db.delete(DBHelper.TableName2,DBHelper.C3+"="+id,null);
+        db.delete(DBHelper.RecipeTable,DBHelper.C1+"="+id,null);
+        db.delete(DBHelper.ingredieantsTable,DBHelper.C3+"="+id,null);
 
     }
 
