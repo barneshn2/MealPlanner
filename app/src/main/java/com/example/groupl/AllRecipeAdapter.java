@@ -31,12 +31,12 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        Recipe r=dataList.get(position);
+        Recipe r = dataList.get(position);
         holder.name.setText(r.getName());
         holder.date.setText(new Date(r.getLastUpdate()).toString());
         final  Recipe []r1=new Recipe[1];
         r1[0]=r;
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() { // GET RID OF THIS IN NEW ADAPTER ALso myight be where i hold the click data
             @Override
             public void onClick(View view) {
                 Bundle b=new Bundle();

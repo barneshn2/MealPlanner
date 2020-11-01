@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView5"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/GetRecipes_forPlan"
+        android:layout_width="417dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/SavePlan_But"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/SavePlan_But"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:text="@string/textview"
-        app:layout_constraintBottom_toTopOf="@+id/GetRecipes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/GetRecipes"
-        android:layout_width="413dp"
-        android:layout_height="619dp"
-        android:padding="5dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginBottom="1dp"
+        android:text="Save Plan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

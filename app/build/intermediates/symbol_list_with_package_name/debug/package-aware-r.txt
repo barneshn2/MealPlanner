@@ -1224,7 +1224,7 @@ id ALT
 id Add
 id CTRL
 id FUNCTION
-id GetRecipes
+id GetRecipes_forPlan
 id META
 id NO_DEBUG
 id RecipeBook_recipes
@@ -1234,6 +1234,7 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Save
+id SavePlan_But
 id SavechangesRBook
 id VV
 id accelerate
@@ -1323,6 +1324,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkBox4
 id checkbox
 id checked
 id chooseRecipeBtn
@@ -1521,7 +1523,6 @@ id textView
 id textView2
 id textView3
 id textView4
-id textView5
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1637,6 +1638,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_one_recipe
+layout row_two_recipe
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
