@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 public class Myrecipebook extends AppCompatActivity {
 
@@ -27,14 +28,15 @@ public class Myrecipebook extends AppCompatActivity {
     public void onCheckboxClick(View view) {
         // Is the view now checked?
         boolean checked = ((CheckBox) view).isChecked();
+        String str= "";
         // Check which checkbox was clicked
         switch(view.getId()) {
             case R.id.checkBox4:
-                if (checked) {
+//                if (checked) {}
                     // Do coding for what happens if checked
+                    str = checked?"Recipe Selected":"Recipe Deselected";
 
-
-                }
             }
+        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
     }
 }
