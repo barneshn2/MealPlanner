@@ -1311,7 +1311,6 @@ id blocking
 id bottom
 id bounce
 id button
-id button11
 id button2
 id button4
 id button5
@@ -1319,6 +1318,7 @@ id button7
 id button8
 id buttonPanel
 id calendarView
+id capturePlanName
 id center
 id center_horizontal
 id center_vertical
@@ -1364,8 +1364,6 @@ id dragUp
 id easeIn
 id easeInOut
 id easeOut
-id editTextDate
-id editTextDate5
 id edit_query
 id end
 id enterAlways
@@ -1454,6 +1452,7 @@ id reverseSawtooth
 id right
 id right_icon
 id right_side
+id savePlanBtn
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1521,7 +1520,6 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
-id textView3
 id textView4
 id text_input_password_toggle
 id textinput_counter

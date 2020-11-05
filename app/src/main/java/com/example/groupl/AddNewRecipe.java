@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AddNewRecipe extends AppCompatActivity {
-    DatabaseHelper mDatabaseHelp;
-    EditText text;
     Button Adding;
     Button save;
     ListView addedItems;
