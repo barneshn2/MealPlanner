@@ -1698,6 +1698,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string plan_description
+string plan_name
 string recipe_name
 string save_plan
 string search_menu_title

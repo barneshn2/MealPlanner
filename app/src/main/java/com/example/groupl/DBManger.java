@@ -130,14 +130,14 @@ public class DBManger {
     }
 
     // insert into Plan table
-    public boolean insertPlansToDataBase(Plan p) {
+    public boolean insertRecipeToPlan(Plan p) {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, p.getContent());
         values.put(DBHelper.C5, p.getrID());
         return db.insert(DBHelper.PlanTable, null, values) > -1;
     }
     // Delete from plan table
-    private void deleteRecipe(int id ){
+    private void deleteRecipeFromPlan(int id ){
         boolean b=db.delete(DBHelper.PlanTable, DBHelper.C5 + "=" + id, null) > 0;
     }
 

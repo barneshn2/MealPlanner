@@ -36,9 +36,12 @@ public class DBHelper extends SQLiteOpenHelper {
                 + C2 + " text ,"+ C3 +" INTEGER )";
 
         // create the plan table (plan primary key, name of plan, Recipe_ID (Foreign key))
+//        String Sql3 = "CREATE TABLE IF NOT EXISTS "
+//                + PlanTable + "(" +  C1  +  " INTEGER PRIMARY KEY AUTOINCREMENT,"
+//                + C2 + " text ," + C5+ " INTEGER ,"+ C4+" text)";
         String Sql3 = "CREATE TABLE IF NOT EXISTS "
                 + PlanTable + "(" +  C1  +  " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + C2 + " text ," + C5+ " INTEGER ,"+ C4+" text)";
+                + C2 + " text ," + C5+ " INTEGER )";
 
         db.execSQL(Sql3);
         db.execSQL(Sql2);
