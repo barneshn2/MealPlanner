@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/drawable_circle.xml.flat",
+        "source": "/Users/admin/MealPlanner16/app/src/main/res/drawable/circle.xml"
+    },
+    {
         "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/mipmap-hdpi_vegi.jpg.flat",
         "source": "/Users/admin/MealPlanner16/app/src/main/res/mipmap-hdpi/vegi.jpg"
     },
@@ -8,12 +12,16 @@
         "source": "/Users/admin/MealPlanner16/app/src/main/res/layout/activity_main2.xml"
     },
     {
+        "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/layout_addplan.xml.flat",
+        "source": "/Users/admin/MealPlanner16/app/src/main/res/layout/addplan.xml"
+    },
+    {
         "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/admin/MealPlanner16/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/layout_addplan.xml.flat",
-        "source": "/Users/admin/MealPlanner16/app/src/main/res/layout/addplan.xml"
+        "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/drawable_rect_round.xml.flat",
+        "source": "/Users/admin/MealPlanner16/app/src/main/res/drawable/rect_round.xml"
     },
     {
         "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
@@ -62,6 +70,10 @@
     {
         "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
         "source": "/Users/admin/MealPlanner16/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/drawable-v24_quick.jpg.flat",
+        "source": "/Users/admin/MealPlanner16/app/src/main/res/drawable-v24/quick.jpg"
     },
     {
         "merged": "/Users/admin/MealPlanner16/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
