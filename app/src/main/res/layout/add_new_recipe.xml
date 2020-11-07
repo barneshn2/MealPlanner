@@ -18,6 +18,7 @@
 
     <Button
         android:id="@+id/Add"
+        android:background="@drawable/rect_round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -42,6 +43,7 @@
 
     <Button
         android:id="@+id/button5"
+        android:background="@drawable/rect_round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -53,6 +55,7 @@
 
     <Button
         android:id="@+id/Save"
+        android:background="@drawable/rect_round"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
