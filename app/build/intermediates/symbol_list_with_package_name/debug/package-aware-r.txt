@@ -1199,6 +1199,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_android_black_24dp
+drawable ic_food
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1229,6 +1231,7 @@ id Bck
 id CTRL
 id DeleteRecipe
 id FUNCTION
+id Logo
 id META
 id NO_DEBUG
 id SHIFT
@@ -1617,6 +1620,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_main2
+layout activity_splash
 layout add_new_recipe
 layout addplan
 layout custom_dialog
