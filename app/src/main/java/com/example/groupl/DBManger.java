@@ -23,7 +23,7 @@ public class DBManger {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
         values.put(DBHelper.C4, r.getLastUpdate());
-        boolean b=db.insert(DBHelper.RecipeTable, null,values) > -1;
+        boolean b=db.insert(DBHelper.TableName, null,values) > -1;
         if (r.getIngredientsList().size()>0){
             for(Ingredients i:r.getIngredientsList()){
                 i.setrID(getLastId());
@@ -32,7 +32,7 @@ public class DBManger {
         }
     }
     public int getLastId(){
-        String SQl = "Select * From " + DBHelper.RecipeTable +" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
+        String SQl = "Select * From " + DBHelper.TableName +" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
         Cursor cursor = db.rawQuery(SQl, null);
         int id=0;
         cursor.moveToFirst();
@@ -50,13 +50,13 @@ public class DBManger {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getContent());
         values.put(DBHelper.C3, r.getrID());
-        return db.insert(DBHelper.ingredieantsTable, null, values) > -1;
+        return db.insert(DBHelper.TableName2, null, values) > -1;
     }
 
 
     public List<Recipe> getAllRecipe() {
         List<Recipe> ret = new ArrayList<>();
-        String SQl = "Select * From " + DBHelper.RecipeTable;
+        String SQl = "Select * From " + DBHelper.TableName;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -75,7 +75,7 @@ public class DBManger {
     }
     public Recipe getOneRecipeByID(int id ) {
         Recipe r=new Recipe();
-        String SQl = "Select * From " + DBHelper.RecipeTable +" where "+ DBHelper.C1+"="+id;
+        String SQl = "Select * From " + DBHelper.TableName +" where "+ DBHelper.C1+"="+id;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -94,7 +94,7 @@ public class DBManger {
 
     public List<Ingredients> getAllIngredients(int id) {
         List<Ingredients> ret = new ArrayList<>();
-        String SQl = "Select * From " + DBHelper.ingredieantsTable + " Where " + DBHelper.C3 + "=" + id;
+        String SQl = "Select * From " + DBHelper.TableName2 + " Where " + DBHelper.C3 + "=" + id;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -116,7 +116,7 @@ public class DBManger {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
         values.put(DBHelper.C4, r.getLastUpdate());
-        boolean b=db.update(DBHelper.RecipeTable, values, DBHelper.C1+"="+r.getId(),null) > -1;
+        boolean b=db.update(DBHelper.TableName, values, DBHelper.C1+"="+r.getId(),null) > -1;
         deleteIngrad(r.getId());
         if (r.getIngredientsList().size()>0){
             for(Ingredients i:r.getIngredientsList()){
@@ -126,7 +126,7 @@ public class DBManger {
     }
 
     private void deleteIngrad(int id ){
-          boolean b=db.delete(DBHelper.ingredieantsTable, DBHelper.C3 + "=" + id, null) > 0;
+          boolean b=db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null) > 0;
     }
 
     // insert into Plan table

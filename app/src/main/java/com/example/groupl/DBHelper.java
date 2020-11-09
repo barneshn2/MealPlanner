@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static String RecipeTable ="RacpiTable";
-    public static String ingredieantsTable ="IngriendensTable";
+    public static String TableName ="RacpiTable";
+    public static String TableName2 ="IngriendensTable";
     public static String PlanTable="PlanTable";
     public static String C1="id"; // Primary keys
     public static String C2="name"; // recipe name
@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public DBHelper(Context context){
-        super(context, RecipeTable,null,4);
+        super(context, TableName,null,4);
     }
 
 
@@ -27,12 +27,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String Sql = "CREATE TABLE IF NOT EXISTS "
                 // (PrimaryKey, recipeName, date)
-                + RecipeTable + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + TableName + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + C2 + " text ,"+C4+" INTEGER)";
 
         String Sql2 = "CREATE TABLE IF NOT EXISTS "
                 // recipePrimaryKey (foreign Key), recipeName,
-                + ingredieantsTable + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + TableName2 + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + C2 + " text ,"+ C3 +" INTEGER )";
 
         // create the plan table (plan primary key, name of plan, Recipe_ID (Foreign key))
@@ -53,7 +53,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        String Sql="ALTER TABLE "+ RecipeTable +"  ADD "+C4+" INTEGER"; // add ingrediants to recipe table
+        String Sql="ALTER TABLE "+ TableName +"  ADD "+C4+" INTEGER"; // add ingrediants to recipe table
         String SQL_AddRecipeToPlan="ALTER TABLE "+ PlanTable +"  ADD "+C5+" INTEGER"; // add recipes to plan table
 
         db.execSQL(Sql);
