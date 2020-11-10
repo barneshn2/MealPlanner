@@ -74,11 +74,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/admi
 	android:supportsRtl
 		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:8:9-36
 	android:roundIcon
 		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:7:9-36
+		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:7:9-37
 	android:allowBackup
 		ADDED from /Users/admin/MealPlanner16/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme

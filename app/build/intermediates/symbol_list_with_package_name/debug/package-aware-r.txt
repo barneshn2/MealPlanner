@@ -1182,7 +1182,6 @@ drawable abc_vector_test
 drawable app
 drawable avd_hide_password
 drawable avd_show_password
-drawable b1
 drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1206,6 +1205,8 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon_background
+drawable icon_foreground
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1654,6 +1655,9 @@ layout support_simple_spinner_dropdown_item
 layout test
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap icon
+mipmap icon_foreground
+mipmap icon_round
 mipmap vegi
 string abc_action_bar_home_description
 string abc_action_bar_up_description
