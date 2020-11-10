@@ -3,7 +3,6 @@ package com.example.groupl;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,17 +18,14 @@ public class ShowAllRecipes extends AppCompatActivity {
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
         adapter.setDataList(Db.getAllRecipe());
-
     }
+
     public void recipieeadd(View view) {
         Intent intet = new Intent(this, AddNewRecipe.class);
         startActivity(intet);
-
-
-
     }
 
-    public void back(View view) {
+public void back(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

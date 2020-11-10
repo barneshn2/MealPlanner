@@ -9,15 +9,16 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+// Is this updating objects based on what is in the database???????
+
 public class DBManger {
     private SQLiteDatabase db;
 
     public DBManger(Context ctx) {
         DBHelper helper = new DBHelper(ctx);
         db = helper.getReadableDatabase();
-
-
     }
+    // insert into recipe table
     public void insertRecpiToDataBase(Recipe r) { //this function will automatically insert Recipes to database
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
@@ -31,7 +32,7 @@ public class DBManger {
         }
     }
     public int getLastId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
-        String SQl = "Select * From " + DBHelper.TableName+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
+        String SQl = "Select * From " + DBHelper.TableName +" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
         Cursor cursor = db.rawQuery(SQl, null);
         int id=0;
         cursor.moveToFirst();
@@ -43,7 +44,7 @@ public class DBManger {
         return id;
         }
 
-
+// insert into ingrediants table
     public boolean insertIngToDataBase(Ingredients r) { //checks the validity of the database
 
         ContentValues values = new ContentValues();
@@ -74,7 +75,7 @@ public class DBManger {
     }
     public Recipe getOneRecipeByID(int id ) {//allows you to view each recipe by using the ID
         Recipe r=new Recipe();
-        String SQl = "Select * From " + DBHelper.TableName+" where "+ DBHelper.C1+"="+id;
+        String SQl = "Select * From " + DBHelper.TableName +" where "+ DBHelper.C1+"="+id;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -126,7 +127,6 @@ public class DBManger {
 
     private void deleteIngrad(int id ){ //this function deletes ingredients from databse
           boolean b=db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null) > 0;
-
     }
 
     public void deleteRecipe(int id){//this function deletes recipes from database
@@ -134,8 +134,6 @@ public class DBManger {
         db.delete(DBHelper.TableName2,DBHelper.C3+"="+id,null);
 
     }
-
-
 
 
 }

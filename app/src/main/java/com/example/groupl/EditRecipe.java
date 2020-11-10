@@ -27,7 +27,6 @@ public class EditRecipe extends AppCompatActivity {
     EditText getIngreidentsName;
     DBManger DB;
     Recipe recipe;
-    Button Delete;
     @Override
 
 
@@ -46,8 +45,7 @@ public class EditRecipe extends AppCompatActivity {
 
         getRecipeName = (EditText) findViewById(R.id.getRecipeName);
         getRecipeName.setText(recipe.getName());
-        Delete = (Button) findViewById(R.id.DeleteRecipe);
-        Delete.setVisibility(View.VISIBLE);
+
         Adding = (Button) findViewById(R.id.Add);
         save = (Button) findViewById(R.id.Save);
         addedItems =(ListView) findViewById(R.id.VV);
@@ -97,22 +95,11 @@ public class EditRecipe extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        Delete.setOnClickListener(new View.OnClickListener() { //for next commit
-            @Override
-            public void onClick(View view) {
-                DeleteRecipe();
-            }
-        });
+
+
+
 
     }
-    private void DeleteRecipe(){
-        DB.deleteRecipe(recipe.getId());
-        findViewById(R.id.button5).callOnClick();
-    }
-
-
-
-
 
     public void Bakbtnn(View view) {
         Intent itent = new Intent(this, ShowAllRecipes.class);

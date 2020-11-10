@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Recipe {
    private int id;
-   private String name = "";
+   private String name;
    private long lastUpdate;
 
    private List<Ingredients> ingredientsList=new ArrayList<>();
