@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="36dp"
-        android:text="My Recipe Book "
+        android:text="@string/my_recipe_book"
         app:layout_constraintBottom_toTopOf="@+id/RecipeBook_recipes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,9 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:autofillHints=""
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/SavechangesRBook"
@@ -38,7 +40,7 @@
         android:layout_marginStart="133dp"
         android:layout_marginTop="61dp"
         android:layout_marginBottom="16dp"
-        android:text="Save Changes"
+        android:text="@string/save_changes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RecipeBook_recipes" />

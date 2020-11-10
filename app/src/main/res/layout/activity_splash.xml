@@ -7,16 +7,17 @@
     android:background="@drawable/rect_round"
 
     tools:context=".Splash">
+
     <ImageView
+        android:id="@+id/Logo"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:id="@+id/Logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/foodicon"
         android:src="@drawable/ic_food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
 
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@
         android:layout_marginEnd="149dp"
         android:layout_marginBottom="1dp"
         android:onClick="saveChecked"
-        android:text="Save Plan"
+        android:text="@string/save_plan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

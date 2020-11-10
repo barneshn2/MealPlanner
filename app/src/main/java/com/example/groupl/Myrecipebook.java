@@ -41,7 +41,7 @@ public class Myrecipebook extends AppCompatActivity {
     }
 
 
-    public ArrayList onCheckboxClick(View view) {
+    public void onCheckboxClick(View view) {
         int x = adapter.dataList.size();
         checked = ((CheckBox) view).isChecked();
         if(checked){
@@ -49,8 +49,6 @@ public class Myrecipebook extends AppCompatActivity {
             } else if (!checked){
                // TODO: remove item from list
             }
-        // return items to add to list
-        return checkedList;
     }
 
 
