@@ -129,10 +129,9 @@ public class DBManger {
           boolean b=db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null) > 0;
     }
 
-    public void deleteRecipe(int id){//this function deletes recipes from database
+    public void deleteRecipe(int id){
         db.delete(DBHelper.TableName,DBHelper.C1+"="+id,null);
         db.delete(DBHelper.TableName2,DBHelper.C3+"="+id,null);
-
     }
 
 
