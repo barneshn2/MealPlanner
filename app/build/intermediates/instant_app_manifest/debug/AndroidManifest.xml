@@ -13,22 +13,23 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@drawable/app"
+        android:icon="@mipmap/icon"
         android:label="MealPlanner"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.groupl.Splash" />
-        <activity android:name="com.example.groupl.ShowAllRecipes" />
-        <activity android:name="com.example.groupl.AddNewRecipe" />
-        <activity android:name="com.example.groupl.EditRecipe" />
-        <activity android:name="com.example.groupl.MainActivity" >
+        <activity android:name="com.example.groupl.Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.groupl.ShowAllRecipes" />
+        <activity android:name="com.example.groupl.AddNewRecipe" />
+        <activity android:name="com.example.groupl.EditRecipe" />
+        <activity android:name="com.example.groupl.MainActivity" >
         </activity>
         <activity android:name="com.example.groupl.Addaplan" />
     </application>
