@@ -18,51 +18,19 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup8"
         tools:text="Generate" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup8"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SHOW_ALL"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        android:layout_marginBottom="114dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+       />
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recipe_name" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name" />
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name" />
-    </RadioGroup>
 
     <TextView
         android:id="@+id/textView2"

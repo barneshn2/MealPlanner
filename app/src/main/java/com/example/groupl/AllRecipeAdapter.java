@@ -36,7 +36,7 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
         holder.date.setText(new Date(r.getLastUpdate()).toString());
         final  Recipe []r1=new Recipe[1];
         r1[0]=r;
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+     /*   holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Bundle b=new Bundle();
@@ -46,8 +46,18 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
                 holder.itemView.getContext().startActivity(i);
             }
         });
+     */   holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+        if(r.isChecked()){
+            holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.selected));
 
-
+        }
+        holder.container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                r1[0].setChecked(!r1[0].isChecked());
+                notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
@@ -58,10 +68,13 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         TextView date;
+        View container;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.recipeName);
             date=itemView.findViewById(R.id.recipeDate);
+            container=itemView.findViewById(R.id.container);
+
 
 
 

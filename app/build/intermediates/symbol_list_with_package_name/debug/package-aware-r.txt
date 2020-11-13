@@ -866,6 +866,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selected
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -874,6 +875,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1449,12 +1451,6 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
-id radioButton
-id radioButton2
-id radioButton3
-id radioButton4
-id radioButton5
-id radioButton6
 id radioGroup8
 id ratio
 id recipeDate
@@ -1653,6 +1649,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout test
+mipmap app
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap icon
