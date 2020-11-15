@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,7 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        Recipe r=dataList.get(position);
+        Recipe r = dataList.get(position);
         holder.name.setText(r.getName());
         holder.date.setText(new Date(r.getLastUpdate()).toString());
         final  Recipe []r1=new Recipe[1];
@@ -58,7 +59,10 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
                 notifyDataSetChanged();
             }
         });
+
     }
+
+
 
     @Override
     public int getItemCount() {

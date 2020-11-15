@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +21,23 @@ public class Addaplan extends AppCompatActivity {
         //setContentView(R.layout.activity_addaplan);
         setContentView(R.layout.addplan);
         Intent intent = getIntent();
+        Button saver = findViewById(R.id.button3);
 
         DBManger Db = new DBManger(Addaplan.this);
         RecyclerView AllRecipes = findViewById(R.id.SHOW_ALL);
-        AllRecipeAdapter adapter=new AllRecipeAdapter();
+        final AllRecipeAdapter adapter=new AllRecipeAdapter();
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
         adapter.setDataList(allrecipes);
+
+        saver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
     public void backbtn(View view) {
         Intent intent = new Intent(this, MainActivity.class);
@@ -37,5 +47,9 @@ public class Addaplan extends AppCompatActivity {
     public void Bakbtn(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void save(){
+
     }
 }
