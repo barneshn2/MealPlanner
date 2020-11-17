@@ -18,6 +18,20 @@ public class DBManger {
 
 
     }
+
+    public int getLastPlanId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
+        String SQl = "Select * From " + DBHelper.TableName3+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
+        Cursor cursor = db.rawQuery(SQl, null);
+        int id=0;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            id=cursor.getInt(cursor.getColumnIndex(DBHelper.C1));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return id;
+    }
+
     public void insertRecpiToDataBase(Recipe r) { //this function will automatically insert Recipes to database
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
@@ -30,6 +44,8 @@ public class DBManger {
             }
         }
     }
+
+
     public int getLastId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
         String SQl = "Select * From " + DBHelper.TableName+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
         Cursor cursor = db.rawQuery(SQl, null);
