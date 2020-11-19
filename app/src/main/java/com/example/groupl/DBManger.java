@@ -31,7 +31,27 @@ public class DBManger {
         cursor.close();
         return id;
     }
+    public List<Plan>getAllPlanse(){
+        List<Plan>retVaLList=new ArrayList<>();
+        String SQl = "Select * From " + DBHelper.TableName3;
+        Cursor cursor = db.rawQuery(SQl, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Plan r = new Plan();
+            r.setId(cursor.getInt(cursor.getColumnIndex(DBHelper.C1)));
+            r.setPlanName(cursor.getString(cursor.getColumnIndex(DBHelper.C6)));
+          //  r.setRecipeList(getAllRecpByPlanId(r.getId()));
+            r.setDate(cursor.getInt(cursor.getColumnIndex(DBHelper.C4)));
+            retVaLList.add(r);
+            cursor.moveToNext();
 
+        }
+
+        cursor.close();
+
+
+        return  retVaLList;
+    }
     public void insertRecpiToDataBase(Recipe r) { //this function will automatically insert Recipes to database
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
