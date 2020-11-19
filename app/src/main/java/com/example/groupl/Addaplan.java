@@ -30,11 +30,13 @@ public class Addaplan extends AppCompatActivity {
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
         adapter.setDataList(allrecipes);
+        final List<Recipe> recipes = Db.getAllRecipe();
+
 
         saver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                save(recipes);
             }
         });
 
@@ -49,7 +51,18 @@ public class Addaplan extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void save(){
+    public void save(List<Recipe> recipes){
+        List<Integer> saved = null;
+        for (int i = 0; i < recipes.size(); i++){
+            Recipe z = recipes.get(i);
+            if (z.isChecked()){
+                saved.add(z.getId());
+            }
+
+        }
+        for (int j = 0; j < saved.size(); j++){
+            System.out.println(saved.get(j));
+        }
 
     }
 }
