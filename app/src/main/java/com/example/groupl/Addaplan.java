@@ -25,7 +25,7 @@ public class Addaplan extends AppCompatActivity {
 
         DBManger Db = new DBManger(Addaplan.this);
         RecyclerView AllRecipes = findViewById(R.id.SHOW_ALL);
-        final AllRecipeAdapter adapter=new AllRecipeAdapter();
+        final AllPlanAdapter adapter= new AllPlanAdapter();
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();

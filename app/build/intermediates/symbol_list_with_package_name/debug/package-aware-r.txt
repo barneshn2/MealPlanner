@@ -1331,6 +1331,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkBox1
 id checkbox
 id checked
 id chronometer
@@ -1338,6 +1339,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id container
+id container1
 id content
 id contentPanel
 id coordinator
@@ -1453,7 +1455,9 @@ id progress_horizontal
 id radio
 id ratio
 id recipeDate
+id recipeDate1
 id recipeName
+id recipeName1
 id rectangles
 id reverseSawtooth
 id right
@@ -1643,6 +1647,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_one_recipe
+layout row_two_plan
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
