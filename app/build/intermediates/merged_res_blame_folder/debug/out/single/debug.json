@@ -32,16 +32,16 @@
         "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\drawable\\o1hz26.jpg"
     },
     {
-        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
+        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\layout\\activity_main2.xml"
     },
     {
         "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_food.png.flat",
         "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_food.png"
     },
     {
-        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main2.xml.flat",
-        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\src\\main\\res\\layout\\activity_main2.xml"
+        "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\Hailey\\Documents\\MealPlanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_food.png.flat",
