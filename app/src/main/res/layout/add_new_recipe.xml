@@ -21,8 +21,8 @@
         android:id="@+id/Add"
 
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="106dp"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="27dp"
         android:text="Add"
@@ -45,28 +45,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/Save"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:text="Save Recipe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/VV"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <Button
         android:id="@+id/button5"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="80dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
         android:onClick="Bakbtnn"
         android:text="Back"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/Save"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="72dp"
-        android:text="Save Recipe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button5"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
 
     <Button
         android:id="@+id/DeleteRecipe"
