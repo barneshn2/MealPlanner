@@ -13,5 +13,7 @@
     <string name="_1_add_recipes_to_your_recipe_book">1. Add recipes to your recipe book</string>
     <string name="_2_add_your_recipes_to_your_meal_plan">2. Add your recipes to your meal plan</string>
     <string name="recipe_book">Recipe Book</string>
+    <string name="SavePlan">SavePlan</string>
+    <string name="Save_Plan">Save Plan</string>
 
 </resources>

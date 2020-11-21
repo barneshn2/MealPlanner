@@ -33,6 +33,7 @@ com/example/groupl/Splash.java
  com.example.groupl.Splash$1
 com/example/groupl/Addaplan.java
  com.example.groupl.Addaplan
+ com.example.groupl.Addaplan$1
 com/example/groupl/DatabaseHelper.java
  com.example.groupl.DatabaseHelper
 com/example/groupl/Plan.java
