@@ -18,6 +18,23 @@ public class DBManger {
 
 
     }
+    public void inserNewPlan(Plan plan){
+
+        ContentValues values = new ContentValues();
+        values.put(DBHelper.C6, plan.getPlanName());
+        values.put(DBHelper.C4, plan.getDate());
+        boolean b=db.insert(DBHelper.TableName3, null,values) > -1;
+        if (b) {
+            int plainID=getLastPlanId();
+            for(Recipe r:plan.getRecipeList()){
+                ContentValues values2 = new ContentValues();
+                values2.put(DBHelper.C5,plainID );
+                values2.put(DBHelper.C3, r.getId());
+                boolean b2=db.insert(DBHelper.TableName4, null,values2) > -1;
+
+            }
+        }
+    }
 
     public int getLastPlanId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
         String SQl = "Select * From " + DBHelper.TableName3+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
