@@ -7,8 +7,17 @@ public class Recipe {
    private int id;
    private String name = "";
    private long lastUpdate;
+   private boolean Checked;
 
-   private List<Ingredients> ingredientsList=new ArrayList<>();
+    public boolean isChecked() {
+        return Checked;
+    }
+
+    public void setChecked(boolean checked) {
+        Checked = checked;
+    }
+
+    private List<Ingredients> ingredientsList=new ArrayList<>();
 
     public int getId() {
         return id;

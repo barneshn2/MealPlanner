@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 public class Splash extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class Splash extends AppCompatActivity {
                     Intent i = new Intent(Splash.this, MainActivity.class);
                     startActivity(i);
                 }catch (Exception e){
-
+                    Log.e("Splash error", e.getMessage());
                 }
             }
         }.start();

@@ -8,7 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ShowAllRecipes extends AppCompatActivity {
+    private List<Recipe> allrecipes = new ArrayList<>();
+    private List<Recipe> selectedrecipes = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +23,8 @@ public class ShowAllRecipes extends AppCompatActivity {
         AllRecipeAdapter adapter=new AllRecipeAdapter();
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
-        adapter.setDataList(Db.getAllRecipe());
+        allrecipes = Db.getAllRecipe();
+        adapter.setDataList(allrecipes);
 
     }
     public void recipieeadd(View view) {

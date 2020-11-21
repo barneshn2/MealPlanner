@@ -41,10 +41,6 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
-array com_google_android_gms_fonts_certs
-array com_google_android_gms_fonts_certs_dev
-array com_google_android_gms_fonts_certs_prod
-array preloaded_fonts
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -870,6 +866,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selected
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -878,6 +875,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1097,7 +1095,6 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
-drawable _4b279f9e9f1e3197157d13bcd723b36
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1184,11 +1181,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable aeed123bbaa5787d19fb986d3dbe097e
 drawable app
 drawable avd_hide_password
 drawable avd_show_password
-drawable b1
 drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1199,7 +1194,6 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable circle
-drawable d838bc104e643b0653022367f5acf677
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1213,8 +1207,8 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable images
-drawable minimalistic_pizza
+drawable icon_background
+drawable icon_foreground
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1230,12 +1224,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable o1hz26
 drawable quick
 drawable rect_round
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-font averia_serif_libre_bold
 id ALT
 id Add
 id Bck
@@ -1325,6 +1317,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
 id button2
 id button3
 id button4
@@ -1332,6 +1325,7 @@ id button5
 id button6
 id button8
 id buttonPanel
+id calendarView
 id center
 id center_horizontal
 id center_vertical
@@ -1457,13 +1451,6 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
-id radioButton
-id radioButton2
-id radioButton3
-id radioButton4
-id radioButton5
-id radioButton6
-id radioGroup8
 id ratio
 id recipeDate
 id recipeName
@@ -1537,14 +1524,11 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView10
+id textView
 id textView2
 id textView3
 id textView4
 id textView5
-id textView7
-id textView8
-id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1664,11 +1648,13 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout test
+mipmap app
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap icon
+mipmap icon_foreground
+mipmap icon_round
 mipmap vegi
-string _1_add_recipes_to_your_recipe_book
-string _2_add_your_recipes_to_your_meal_plan
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1707,8 +1693,6 @@ string delete_a_plan
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
-string made_easy
-string meal_planning
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
@@ -1718,7 +1702,6 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string plan_description
-string recipe_book
 string recipe_name
 string search_menu_title
 string selected_recipes
