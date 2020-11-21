@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="143dp"
-        android:layout_height="42dp"
+        android:layout_width="146dp"
+        android:layout_height="60dp"
         android:fontFamily="cursive"
-        android:text="Made Easy"
+        android:text="@string/made_easy"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_width="264dp"
         android:layout_height="42dp"
         android:fontFamily="@font/averia_serif_libre_bold"
-        android:text="Meal Planning"
+        android:text="@string/meal_planning"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,56 +42,57 @@
         android:id="@+id/textView9"
         android:layout_width="239dp"
         android:layout_height="68dp"
-        android:text="1. Add recipes to your recipe book"
+        android:text="@string/_1_add_recipes_to_your_recipe_book"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.146"
+        app:layout_constraintVertical_bias="0.116"
         tools:text="1. Add recipes to your recipe book" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="332dp"
-        android:layout_height="68dp"
-        android:background="@drawable/rect_round"
-        android:onClick="recip"
-        android:text="Recipe Book"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.132" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="332dp"
-        android:layout_height="68dp"
-        android:background="@drawable/rect_round"
-        android:onClick="AddaPlan"
-        android:text="@string/add_a_plan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.107" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="245dp"
         android:layout_height="78dp"
-        android:text="2. Add your recipes to your meal plan"
+        android:text="@string/_2_add_your_recipes_to_your_meal_plan"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintVertical_bias="0.061"
         tools:text="2. Add your recipes to your meal plan" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="332dp"
+        android:layout_height="68dp"
+        android:onClick="recip"
+        android:text="@string/recipe_book"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="332dp"
+        android:layout_height="68dp"
+        android:onClick="AddaPlan"
+        android:text="@string/add_a_plan"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.111" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

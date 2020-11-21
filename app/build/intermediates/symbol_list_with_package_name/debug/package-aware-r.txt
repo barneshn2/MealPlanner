@@ -1661,6 +1661,8 @@ layout test
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap vegi
+string _1_add_recipes_to_your_recipe_book
+string _2_add_your_recipes_to_your_meal_plan
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1699,6 +1701,8 @@ string delete_a_plan
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
+string made_easy
+string meal_planning
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
@@ -1708,6 +1712,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string plan_description
+string recipe_book
 string recipe_name
 string search_menu_title
 string selected_recipes

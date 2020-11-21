@@ -8,5 +8,10 @@
     <string name="delete_a_plan">Delete a plan</string>
     <string name="recipe_name">Recipe Name</string>
     <string name="selected_recipes">Selected Recipes</string>
+    <string name="made_easy">Made Easy</string>
+    <string name="meal_planning">Meal Planning</string>
+    <string name="_1_add_recipes_to_your_recipe_book">1. Add recipes to your recipe book</string>
+    <string name="_2_add_your_recipes_to_your_meal_plan">2. Add your recipes to your meal plan</string>
+    <string name="recipe_book">Recipe Book</string>
 
 </resources>
