@@ -1,0 +1,39 @@
+com/example/groupl/Recipe.java
+ com.example.groupl.Recipe
+com/example/groupl/BuildConfig.java
+ com.example.groupl.BuildConfig
+com/example/groupl/EditRecipe.java
+ com.example.groupl.EditRecipe
+ com.example.groupl.EditRecipe$1
+ com.example.groupl.EditRecipe$2
+ com.example.groupl.EditRecipe$3
+ com.example.groupl.EditRecipe$4
+com/example/groupl/DBHelper.java
+ com.example.groupl.DBHelper
+com/example/groupl/AllRecipeAdapter.java
+ com.example.groupl.AllRecipeAdapter
+ com.example.groupl.AllRecipeAdapter$1
+ com.example.groupl.AllRecipeAdapter$ViewHolder
+com/example/groupl/Ingredients.java
+ com.example.groupl.Ingredients
+com/example/groupl/ShowAllRecipes.java
+ com.example.groupl.ShowAllRecipes
+com/example/groupl/SimpleDateFormat.java
+ com.example.groupl.SimpleDateFormat
+com/example/groupl/DBManger.java
+ com.example.groupl.DBManger
+com/example/groupl/MainActivity.java
+ com.example.groupl.MainActivity
+com/example/groupl/AddNewRecipe.java
+ com.example.groupl.AddNewRecipe
+ com.example.groupl.AddNewRecipe$1
+ com.example.groupl.AddNewRecipe$2
+com/example/groupl/Splash.java
+ com.example.groupl.Splash
+ com.example.groupl.Splash$1
+com/example/groupl/Addaplan.java
+ com.example.groupl.Addaplan
+com/example/groupl/DatabaseHelper.java
+ com.example.groupl.DatabaseHelper
+com/example/groupl/Plan.java
+ com.example.groupl.Plan
