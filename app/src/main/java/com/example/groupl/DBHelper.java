@@ -43,7 +43,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL(Sql2);
         db.execSQL(Sql);
-
+        db.execSQL(Sql3);
+        db.execSQL(Sql4);
 
     }
 
@@ -51,8 +52,16 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         String Sql="ALTER TABLE "+ TableName+"  ADD "+C4+" INTEGER";
+        String Sql3 = "CREATE TABLE IF NOT EXISTS " //ingredients table
+                + TableName3 + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + C6 + " text)";
 
+        String Sql4 = "CREATE TABLE IF NOT EXISTS " //ingredients table
+                + TableName4 + "(" + C1+" INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + C5 + " INTEGER ,"+C3+" INTEGER )";
         db.execSQL(Sql);
+        db.execSQL(Sql3);
+        db.execSQL(Sql4);
 
     }
 }

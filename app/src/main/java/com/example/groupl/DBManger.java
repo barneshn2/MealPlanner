@@ -18,7 +18,7 @@ public class DBManger {
 
 
     }
-    public void inserNewPlan(Plan plan){
+    public void inserNewPlan(Plan plan){ //inserts new plans to the table plan table
 
         ContentValues values = new ContentValues();
         values.put(DBHelper.C6, plan.getPlanName());
@@ -48,7 +48,7 @@ public class DBManger {
         cursor.close();
         return id;
     }
-    public List<Plan>getAllPlanse(){
+    public List<Plan>getAllPlanse(){ //brings all the plans from the plan table to print them to the user
         List<Plan>retVaLList=new ArrayList<>();
         String SQl = "Select * From " + DBHelper.TableName3;
         Cursor cursor = db.rawQuery(SQl, null);
@@ -84,7 +84,7 @@ public class DBManger {
 
         cursor.close();
 
-        List<Recipe>retVaLList=new ArrayList<>();
+        List<Recipe>retVaLList=new ArrayList<>();//
         for (Integer i :recipIdList){
             Recipe r=getOneRecipeByID(i);
             Log.e("PlansRecId",r.getId()+"");
