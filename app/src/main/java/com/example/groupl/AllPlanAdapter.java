@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -64,6 +65,7 @@ public class AllPlanAdapter extends RecyclerView.Adapter<AllPlanAdapter.ViewHold
 
 
 
+
     @Override
     public int getItemCount() {
         return dataList.size();
@@ -73,11 +75,13 @@ public class AllPlanAdapter extends RecyclerView.Adapter<AllPlanAdapter.ViewHold
         TextView name;
         TextView date;
         View container;
+        CheckBox check;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.recipeName1);
             date=itemView.findViewById(R.id.recipeDate1);
             container=itemView.findViewById(R.id.container1);
+            check = itemView.findViewById(R.id.checkBox1);
 
 
 

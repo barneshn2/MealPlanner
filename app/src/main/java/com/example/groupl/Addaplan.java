@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +34,26 @@ public class Addaplan extends AppCompatActivity {
         final List<Recipe> recipes = Db.getAllRecipe();
 
 
+
         saver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                save(recipes);
+                for (Recipe selectedRecipes : allrecipes){
+                    if(selectedRecipes.isChecked()){
+                        if (!selectedrecipes.contains(selectedRecipes)){
+                            selectedrecipes.add(selectedRecipes);
+                        }
+                    }
+                    else{
+                        if(selectedrecipes.contains(selectedRecipes)){
+                            selectedrecipes.remove(selectedRecipes);
+                        }
+                    }
+                }
+                Toast.makeText(Addaplan.this,"SelectedItemsSize = "+selectedrecipes.size() , Toast.LENGTH_SHORT).show();
+                //LOOK at Master
+
+
             }
         });
 
@@ -50,19 +67,20 @@ public class Addaplan extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
-    public void save(List<Recipe> recipes){
-        List<Integer> saved = null;
-        for (int i = 0; i < recipes.size(); i++){
-            Recipe z = recipes.get(i);
-            if (z.isChecked()){
-                saved.add(z.getId());
-            }
-
-        }
-        for (int j = 0; j < saved.size(); j++){
-            System.out.println(saved.get(j));
-        }
-
-    }
+//
+//    public void save(List<Recipe> recipes){
+//
+//        List<Integer> saved = null;
+//        for (int i = 0; i < recipes.size(); i++){
+//            Recipe z = recipes.get(i);
+//            if (z.isChecked()){
+//                saved.add(z.getId());
+//            }
+//
+//        }
+//        for (int j = 0; j < saved.size(); j++){
+//            System.out.println(saved.get(j));
+//        }
+//
+//    }
 }
