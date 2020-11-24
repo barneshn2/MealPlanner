@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.ViewHolder> {
+public class AllRecipewithselectionAdapter extends RecyclerView.Adapter<AllRecipewithselectionAdapter.ViewHolder> {
     private List<Recipe> dataList = new ArrayList<>();
 
     public void setDataList(List<Recipe> dataList) {
@@ -36,16 +36,18 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
         holder.date.setText(new Date(r.getLastUpdate()).toString());
         final  Recipe []r1=new Recipe[1];
         r1[0]=r;
-        holder.container.setOnClickListener(new View.OnClickListener() {
+       holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle b=new Bundle();
-                b.putInt("id",r1[0].getId());
-                Intent i=new Intent(holder.itemView.getContext(), EditRecipe.class);
-                i.putExtras(b);
-                holder.itemView.getContext().startActivity(i);
+                r1[0].setChecked(!r1[0].isChecked());
+                notifyDataSetChanged();
             }
         });
+       holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+        if(r.isChecked()){
+            holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.selected));
+
+        }
 
     }
 

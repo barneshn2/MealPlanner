@@ -19,6 +19,14 @@ public class Plan implements Serializable {
         Checked = checked;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getPlanName() {
         return planName;
     }
@@ -43,14 +51,6 @@ public class Plan implements Serializable {
         this.date = date;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     // default constructor
     public Plan() {
         this.planName = "Untitled Plan";
@@ -61,7 +61,7 @@ public class Plan implements Serializable {
         this.planName = planName;
         this.recipeList = recipeList;
     }
-    public void namePlan (String planName) {
+  /*  public void namePlan (String planName) {
         this.planName = planName;
     }
     public void addRecipe(Recipe myRecipe) {
@@ -77,4 +77,4 @@ public class Plan implements Serializable {
         this.recipeList.clear();
     }
 
-}
+*/}

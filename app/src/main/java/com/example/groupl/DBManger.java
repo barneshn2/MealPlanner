@@ -18,6 +18,23 @@ public class DBManger {
 
 
     }
+    public void inserNewPlan(Plan plan){ //inserts new plans to the table plan table
+
+        ContentValues values = new ContentValues();
+        values.put(DBHelper.C6, plan.getPlanName());
+        values.put(DBHelper.C4, plan.getDate());
+        boolean b=db.insert(DBHelper.TableName3, null,values) > -1;
+        if (b) {
+            int plainID=getLastPlanId();
+            for(Recipe r:plan.getRecipeList()){
+                ContentValues values2 = new ContentValues();
+                values2.put(DBHelper.C5,plainID );
+                values2.put(DBHelper.C3, r.getId());
+                boolean b2=db.insert(DBHelper.TableName4, null,values2) > -1;
+
+            }
+        }
+    }
 
     public int getLastPlanId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
         String SQl = "Select * From " + DBHelper.TableName3+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
@@ -31,7 +48,7 @@ public class DBManger {
         cursor.close();
         return id;
     }
-    public List<Plan>getAllPlanse(){
+    public List<Plan>getAllPlanse(){ //brings all the plans from the plan table to print them to the user
         List<Plan>retVaLList=new ArrayList<>();
         String SQl = "Select * From " + DBHelper.TableName3;
         Cursor cursor = db.rawQuery(SQl, null);
@@ -40,7 +57,7 @@ public class DBManger {
             Plan r = new Plan();
             r.setId(cursor.getInt(cursor.getColumnIndex(DBHelper.C1)));
             r.setPlanName(cursor.getString(cursor.getColumnIndex(DBHelper.C6)));
-          //  r.setRecipeList(getAllRecpByPlanId(r.getId()));
+            r.setRecipeList(getAllRecpByPlanId(r.getId()));
             r.setDate(cursor.getInt(cursor.getColumnIndex(DBHelper.C4)));
             retVaLList.add(r);
             cursor.moveToNext();
@@ -52,6 +69,34 @@ public class DBManger {
 
         return  retVaLList;
     }
+    private List<Recipe>getAllRecpByPlanId(int planid){
+        List<Integer>recipIdList=new ArrayList<>();
+        String SQl = "Select * From " + DBHelper.TableName4 +" where "+DBHelper.C5+"="+planid;
+        Cursor cursor = db.rawQuery(SQl, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+
+            recipIdList.add(cursor.getInt(cursor.getColumnIndex(DBHelper.C3)));
+
+            cursor.moveToNext();
+
+        }
+
+        cursor.close();
+
+        List<Recipe>retVaLList=new ArrayList<>();//
+        for (Integer i :recipIdList){
+            Recipe r=getOneRecipeByID(i);
+            Log.e("PlansRecId",r.getId()+"");
+            retVaLList.add(r);
+
+        }
+
+        return  retVaLList;
+
+
+    }
+
     public void insertRecpiToDataBase(Recipe r) { //this function will automatically insert Recipes to database
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
