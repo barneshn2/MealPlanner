@@ -6,15 +6,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Addaplan extends AppCompatActivity {
     private List<Recipe> allrecipes = new ArrayList<>();
-    private List<Recipe> selectedrecipes = new ArrayList<>();
+    private List<Recipe> selectedrecipesList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,19 @@ public class Addaplan extends AppCompatActivity {
     }
 
     public void save(){
+            for (Recipe selectedRecipe:allrecipes){
+                if (selectedRecipe.isChecked()){
+                    if (!selectedrecipesList.contains(selectedRecipe)){
+                        selectedrecipesList.add(selectedRecipe);
+                        Log.e("selectPlan ",selectedRecipe.getId()+" ");
+                    }
+                }else {
+                    if (selectedrecipesList.contains(selectedRecipe)){
+                        selectedrecipesList.remove(selectedRecipe);
+                    }
+                }
 
+            }
+            Toast.makeText(this, "SelectedItemsSize = "+selectedrecipesList.size(), Toast.LENGTH_SHORT).show();
     }
 }
