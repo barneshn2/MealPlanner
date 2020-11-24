@@ -8,17 +8,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ShowAllPlans extends AppCompatActivity {
+    private List<Plan> all_Plans = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showplans);
+        DBManger Db = new DBManger(ShowAllPlans.this);
         RecyclerView AllPlans = findViewById(R.id.SHOW_ALL_plan);
         AllPlanAdapter adapter= new AllPlanAdapter();
         AllPlans.setLayoutManager(new LinearLayoutManager(this));
         AllPlans.setAdapter(adapter);
-        Plan z = (Plan) getIntent().getSerializableExtra("plans");
+        all_Plans =Db.getAllPlanse();
+        adapter.setDataList(all_Plans);
 
     }
 
