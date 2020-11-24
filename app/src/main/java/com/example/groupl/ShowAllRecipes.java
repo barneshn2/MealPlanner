@@ -39,4 +39,5 @@ public class ShowAllRecipes extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
 }

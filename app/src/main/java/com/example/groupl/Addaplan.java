@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Addaplan extends AppCompatActivity {
@@ -23,18 +25,18 @@ public class Addaplan extends AppCompatActivity {
         setContentView(R.layout.addplan);
         Intent intent = getIntent();
         Button saver = findViewById(R.id.button3);
-
+        final EditText pName = findViewById(R.id.planName);
+        final String p_Name = pName.getText().toString();
         DBManger Db = new DBManger(Addaplan.this);
         RecyclerView AllRecipes = findViewById(R.id.SHOW_ALL);
-        final AllPlanAdapter adapter= new AllPlanAdapter();
+        final AllRecipeAdapter adapter= new AllRecipeAdapter();
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
         adapter.setDataList(allrecipes);
         final List<Recipe> recipes = Db.getAllRecipe();
 
-
-
+        final Intent intent2 = new Intent(this, ShowAllPlans.class);
         saver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +54,12 @@ public class Addaplan extends AppCompatActivity {
                 }
                 Toast.makeText(Addaplan.this,"SelectedItemsSize = "+selectedrecipes.size() , Toast.LENGTH_SHORT).show();
                 //LOOK at Master
-
+                Plan z = new Plan();
+                z.setPlanName(p_Name);
+                z.setRecipeList(selectedrecipes);
+                z.setDate(Calendar.getInstance().getTimeInMillis());
+                intent2.putExtra("plans", z);
+                startActivity(intent2);
 
             }
         });

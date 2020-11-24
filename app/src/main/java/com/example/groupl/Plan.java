@@ -1,9 +1,10 @@
 package com.example.groupl;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Plan {
+public class Plan implements Serializable {
     String planName;
     List<Recipe> recipeList = new ArrayList<>();
     long date;
