@@ -14,10 +14,10 @@ public class ShowAllPlans extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showplans);
-        RecyclerView AllRecipes = findViewById(R.id.SHOW_ALL_plan);
-        AllRecipeAdapter adapter= new AllRecipeAdapter();
-        AllRecipes.setLayoutManager(new LinearLayoutManager(this));
-        AllRecipes.setAdapter(adapter);
+        RecyclerView AllPlans = findViewById(R.id.SHOW_ALL_plan);
+        AllPlanAdapter adapter= new AllPlanAdapter();
+        AllPlans.setLayoutManager(new LinearLayoutManager(this));
+        AllPlans.setAdapter(adapter);
         Plan z = (Plan) getIntent().getSerializableExtra("plans");
 
     }

@@ -58,7 +58,6 @@ public class Addaplan extends AppCompatActivity {
                 z.setPlanName(p_Name);
                 z.setRecipeList(selectedrecipes);
                 z.setDate(Calendar.getInstance().getTimeInMillis());
-                intent2.putExtra("plans", z);
                 startActivity(intent2);
 
             }

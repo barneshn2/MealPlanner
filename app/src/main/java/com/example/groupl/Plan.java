@@ -9,6 +9,15 @@ public class Plan implements Serializable {
     List<Recipe> recipeList = new ArrayList<>();
     long date;
     int id;
+    boolean Checked;
+
+    public boolean isChecked() {
+        return Checked;
+    }
+
+    public void setChecked(boolean checked) {
+        Checked = checked;
+    }
 
     public String getPlanName() {
         return planName;
