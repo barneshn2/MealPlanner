@@ -25,6 +25,7 @@ public class ShowAllRecipes extends AppCompatActivity {
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
         adapter.setDataList(allrecipes);
+        getSupportActionBar().hide();
 
     }
     public void recipieeadd(View view) {

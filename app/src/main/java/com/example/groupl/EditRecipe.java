@@ -40,7 +40,7 @@ public class EditRecipe extends AppCompatActivity {
         }
         DB = new DBManger(EditRecipe.this);
         recipe=DB.getOneRecipeByID(id);
-
+        getSupportActionBar().hide();
         setContentView(R.layout.add_new_recipe);
         getIngreidentsName = (EditText) findViewById(R.id.getIngreidentsName);
 

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.calendarView);
-
+        getSupportActionBar().hide();
     }
 
     public void AddaPlan(View view) {

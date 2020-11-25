@@ -32,7 +32,7 @@ public class Addaplan extends AppCompatActivity {
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
         adapter.setDataList(allrecipes);
-
+        getSupportActionBar().hide();
         saver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
