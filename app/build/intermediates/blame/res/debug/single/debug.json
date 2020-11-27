@@ -88,6 +88,10 @@
         "source": "/Users/admin/MealPlanner18/app/src/main/res/layout/activity_splash.xml"
     },
     {
+        "merged": "/Users/admin/MealPlanner18/app/build/intermediates/res/merged/debug/layout_row_one_plan.xml.flat",
+        "source": "/Users/admin/MealPlanner18/app/src/main/res/layout/row_one_plan.xml"
+    },
+    {
         "merged": "/Users/admin/MealPlanner18/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_android_black_24dp.xml.flat",
         "source": "/Users/admin/MealPlanner18/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_android_black_24dp.xml"
     },

@@ -1642,6 +1642,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_one_plan
 layout row_one_recipe
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

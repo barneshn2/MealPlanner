@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static String C6="plan_name"; //Date
 
     public DBHelper(Context context){
-        super(context, TableName,null,3);
+        super(context, TableName,null,4);
     }
 
 
