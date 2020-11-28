@@ -1,4 +1,4 @@
-#Fri Nov 27 23:46:50 EST 2020
+#Sat Nov 28 00:04:42 EST 2020
 base.0=/Users/admin/MealPlanner18/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

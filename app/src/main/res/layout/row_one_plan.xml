@@ -7,27 +7,40 @@
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
     android:layout_height="wrap_content">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
-        android:padding="5dp"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/deletIcon"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-        <TextView
-            android:id="@+id/recipeName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/container"
             android:padding="5dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/recipeDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintTop_toBottomOf="@id/recipeName" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/recipeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recipeDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintTop_toBottomOf="@id/recipeName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

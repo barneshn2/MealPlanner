@@ -860,6 +860,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1201,6 +1202,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_android_black_24dp
+drawable ic_baseline_delete_forever_24
 drawable ic_food
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1348,6 +1350,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deletIcon
 id deltaRelative
 id design_bottom_sheet
 id design_menu_item_action_area
