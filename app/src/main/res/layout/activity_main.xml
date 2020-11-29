@@ -101,7 +101,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="332dp"
         android:layout_height="68dp"
-        android:text="Plan Book"
+        android:text="@string/plan_book"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

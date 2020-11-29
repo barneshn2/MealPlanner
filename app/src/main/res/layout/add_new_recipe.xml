@@ -12,10 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:ems="10"
-        android:hint="Ingreident Name"
+        android:hint="@string/ingreident_name"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/Add"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/Add"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="27dp"
-        android:text="Add"
+        android:text="@string/add"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@id/getIngreidentsName"
         app:layout_constraintTop_toBottomOf="@id/getRecipeName" />
@@ -39,17 +40,18 @@
         android:layout_marginBottom="156dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Recipe Name"
+        android:hint="@string/recipe_name"
         app:layout_constraintBottom_toTopOf="@+id/VV"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/Save"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:text="Save Recipe"
+        android:text="@string/save_recipe"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +68,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="16dp"
         android:onClick="Bakbtnn"
-        android:text="Back"
+        android:text="@string/back"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="37dp"
-        android:text="Delete Recipe"
+        android:text="@string/delete_recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
