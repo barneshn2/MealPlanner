@@ -18,38 +18,40 @@ public class DBManger {
 
 
     }
-    public void inserNewPlan(Plan plan){
+
+    public void inserNewPlan(Plan plan) {
 
         ContentValues values = new ContentValues();
         values.put(DBHelper.C6, plan.getPlanName());
         values.put(DBHelper.C4, plan.getDate());
-        boolean b=db.insert(DBHelper.TableName3, null,values) > -1;
+        boolean b = db.insert(DBHelper.TableName3, null, values) > -1;
         if (b) {
-            int plainID=getLastPlanId();
-            for(Recipe r:plan.getRecipeList()){
+            int plainID = getLastPlanId();
+            for (Recipe r : plan.getRecipeList()) {
                 ContentValues values2 = new ContentValues();
-                values2.put(DBHelper.C5,plainID );
+                values2.put(DBHelper.C5, plainID);
                 values2.put(DBHelper.C3, r.getId());
-                boolean b2=db.insert(DBHelper.TableName4, null,values2) > -1;
+                boolean b2 = db.insert(DBHelper.TableName4, null, values2) > -1;
 
             }
         }
     }
 
-    public int getLastPlanId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
-        String SQl = "Select * From " + DBHelper.TableName3+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
+    public int getLastPlanId() { //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
+        String SQl = "Select * From " + DBHelper.TableName3 + " ORDER BY " + DBHelper.C1 + " DESC LIMIT 1";
         Cursor cursor = db.rawQuery(SQl, null);
-        int id=0;
+        int id = 0;
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            id=cursor.getInt(cursor.getColumnIndex(DBHelper.C1));
+            id = cursor.getInt(cursor.getColumnIndex(DBHelper.C1));
             cursor.moveToNext();
         }
         cursor.close();
         return id;
     }
-    public List<Plan>getAllPlanse(){
-        List<Plan>retVaLList=new ArrayList<>();
+
+    public List<Plan> getAllPlanse() {
+        List<Plan> retVaLList = new ArrayList<>();
         String SQl = "Select * From " + DBHelper.TableName3;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
@@ -67,11 +69,12 @@ public class DBManger {
         cursor.close();
 
 
-        return  retVaLList;
+        return retVaLList;
     }
-    private List<Recipe>getAllRecpByPlanId(int planid){
-        List<Integer>recipIdList=new ArrayList<>();
-        String SQl = "Select * From " + DBHelper.TableName4 +" where "+DBHelper.C5+"="+planid;
+
+    private List<Recipe> getAllRecpByPlanId(int planid) {
+        List<Integer> recipIdList = new ArrayList<>();
+        String SQl = "Select * From " + DBHelper.TableName4 + " where " + DBHelper.C5 + "=" + planid;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -84,15 +87,15 @@ public class DBManger {
 
         cursor.close();
 
-        List<Recipe>retVaLList=new ArrayList<>();
-        for (Integer i :recipIdList){
-            Recipe r=getOneRecipeByID(i);
-            Log.e("PlansRecId",r.getId()+"");
+        List<Recipe> retVaLList = new ArrayList<>();
+        for (Integer i : recipIdList) {
+            Recipe r = getOneRecipeByID(i);
+            Log.e("PlansRecId", r.getId() + "");
             retVaLList.add(r);
 
         }
 
-        return  retVaLList;
+        return retVaLList;
 
 
     }
@@ -101,9 +104,9 @@ public class DBManger {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
         values.put(DBHelper.C4, r.getLastUpdate());
-        boolean b=db.insert(DBHelper.TableName, null,values) > -1;
-        if (r.getIngredientsList().size()>0){
-            for(Ingredients i:r.getIngredientsList()){
+        boolean b = db.insert(DBHelper.TableName, null, values) > -1;
+        if (r.getIngredientsList().size() > 0) {
+            for (Ingredients i : r.getIngredientsList()) {
                 i.setrID(getLastId());
                 insertIngToDataBase(i);
             }
@@ -111,18 +114,18 @@ public class DBManger {
     }
 
 
-    public int getLastId(){ //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
-        String SQl = "Select * From " + DBHelper.TableName+" ORDER BY "+ DBHelper.C1 +" DESC LIMIT 1";
+    public int getLastId() { //this function will organize the order of the recipes in the database. forexample, the last entered recipe will be all the way the bottom of the table
+        String SQl = "Select * From " + DBHelper.TableName + " ORDER BY " + DBHelper.C1 + " DESC LIMIT 1";
         Cursor cursor = db.rawQuery(SQl, null);
-        int id=0;
+        int id = 0;
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            id=cursor.getInt(cursor.getColumnIndex(DBHelper.C1));
+            id = cursor.getInt(cursor.getColumnIndex(DBHelper.C1));
             cursor.moveToNext();
         }
         cursor.close();
         return id;
-        }
+    }
 
 
     public boolean insertIngToDataBase(Ingredients r) { //checks the validity of the database
@@ -147,15 +150,16 @@ public class DBManger {
             r.setIngredientsList(getAllIngredients(r.getId()));
             ret.add(r);
             cursor.moveToNext();
-            Log.e("Test Data ",r.getName()+ r.getId());
+            Log.e("Test Data ", r.getName() + r.getId());
         }
 
         cursor.close();
         return ret;
     }
-    public Recipe getOneRecipeByID(int id ) {//allows you to view each recipe by using the ID
-        Recipe r=new Recipe();
-        String SQl = "Select * From " + DBHelper.TableName+" where "+ DBHelper.C1+"="+id;
+
+    public Recipe getOneRecipeByID(int id) {//allows you to view each recipe by using the ID
+        Recipe r = new Recipe();
+        String SQl = "Select * From " + DBHelper.TableName + " where " + DBHelper.C1 + "=" + id;
         Cursor cursor = db.rawQuery(SQl, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -165,7 +169,7 @@ public class DBManger {
             r.setLastUpdate(cursor.getLong(cursor.getColumnIndex(DBHelper.C4)));
 
             cursor.moveToNext();
-            Log.e("Test Data ",r.getName()+ r.getId());
+            Log.e("Test Data ", r.getName() + r.getId());
         }
         cursor.close();
         return r;
@@ -184,7 +188,7 @@ public class DBManger {
             i.setrID(cursor.getInt(cursor.getColumnIndex(DBHelper.C3)));
             ret.add(i);
             cursor.moveToNext();
-            Log.e("Test Ingreidents ",i.getContent()+ i.getId());
+            Log.e("Test Ingreidents ", i.getContent() + i.getId());
         }
 
         cursor.close();
@@ -196,23 +200,23 @@ public class DBManger {
         ContentValues values = new ContentValues();
         values.put(DBHelper.C2, r.getName());
         values.put(DBHelper.C4, r.getLastUpdate());
-        boolean b=db.update(DBHelper.TableName, values, DBHelper.C1+"="+r.getId(),null) > -1;
+        boolean b = db.update(DBHelper.TableName, values, DBHelper.C1 + "=" + r.getId(), null) > -1;
         deleteIngrad(r.getId());
-        if (r.getIngredientsList().size()>0){
-            for(Ingredients i:r.getIngredientsList()){
+        if (r.getIngredientsList().size() > 0) {
+            for (Ingredients i : r.getIngredientsList()) {
                 insertIngToDataBase(i);
             }
         }
     }
 
-    private void deleteIngrad(int id ){ //this function deletes ingredients from databse
-          boolean b=db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null) > 0;
+    private void deleteIngrad(int id) { //this function deletes ingredients from databse
+        boolean b = db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null) > 0;
 
     }
 
-    public void deleteRecipe(int id){//this function deletes recipes from database
-        db.delete(DBHelper.TableName,DBHelper.C1+"="+id,null);
-        db.delete(DBHelper.TableName2,DBHelper.C3+"="+id,null);
+    public void deleteRecipe(int id) {//this function deletes recipes from database
+        db.delete(DBHelper.TableName, DBHelper.C1 + "=" + id, null);
+        db.delete(DBHelper.TableName2, DBHelper.C3 + "=" + id, null);
 
     }
 

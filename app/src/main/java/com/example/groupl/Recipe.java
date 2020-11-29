@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe {
-   private int id;
-   private String name = "";
-   private long lastUpdate;
-   private boolean Checked;
+    private int id;
+    private String name = "";
+    private long lastUpdate;
+    private boolean Checked;
 
     public boolean isChecked() {
         return Checked;
@@ -17,7 +17,7 @@ public class Recipe {
         Checked = checked;
     }
 
-    private List<Ingredients> ingredientsList=new ArrayList<>();
+    private List<Ingredients> ingredientsList = new ArrayList<>();
 
     public int getId() {
         return id;

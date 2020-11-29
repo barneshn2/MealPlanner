@@ -15,6 +15,7 @@ import java.util.List;
 public class Addaplan extends AppCompatActivity {
     private List<Recipe> allrecipes = new ArrayList<>();
     private List<Recipe> selectedrecipes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class Addaplan extends AppCompatActivity {
 
         DBManger Db = new DBManger(Addaplan.this);
         RecyclerView AllRecipes = findViewById(R.id.SHOW_ALL);
-        final AllRecipeAdapter adapter=new AllRecipeAdapter();
+        final AllRecipeAdapter adapter = new AllRecipeAdapter();
         AllRecipes.setLayoutManager(new LinearLayoutManager(this));
         AllRecipes.setAdapter(adapter);
         allrecipes = Db.getAllRecipe();
@@ -39,6 +40,7 @@ public class Addaplan extends AppCompatActivity {
         });
 
     }
+
     public void backbtn(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -49,7 +51,7 @@ public class Addaplan extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void save(){
+    public void save() {
 
     }
 }

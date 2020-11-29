@@ -35,20 +35,10 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
         Recipe r = dataList.get(position);
         holder.name.setText(r.getName());
         holder.date.setText(new Date(r.getLastUpdate()).toString());
-        final  Recipe []r1=new Recipe[1];
-        r1[0]=r;
-     /*   holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bundle b=new Bundle();
-                b.putInt("id",r1[0].getId());
-                Intent i=new Intent(holder.itemView.getContext(), EditRecipe.class);
-                i.putExtras(b);
-                holder.itemView.getContext().startActivity(i);
-            }
-        });
-     */   holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.white));
-        if(r.isChecked()){
+        final Recipe[] r1 = new Recipe[1];
+        r1[0] = r;
+        holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+        if (r.isChecked()) {
             holder.container.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.selected));
 
         }
@@ -62,8 +52,6 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
 
     }
 
-
-
     @Override
     public int getItemCount() {
         return dataList.size();
@@ -73,15 +61,12 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.View
         TextView name;
         TextView date;
         View container;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.recipeName);
-            date=itemView.findViewById(R.id.recipeDate);
-            container=itemView.findViewById(R.id.container);
-
-
-
-
+            name = itemView.findViewById(R.id.recipeName);
+            date = itemView.findViewById(R.id.recipeDate);
+            container = itemView.findViewById(R.id.container);
 
         }
     }

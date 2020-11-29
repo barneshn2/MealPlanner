@@ -28,18 +28,19 @@ public class EditRecipe extends AppCompatActivity {
     DBManger DB;
     Recipe recipe;
     Button Delete;
+
     @Override
 
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int id=0;
-        if (getIntent().getExtras()!=null){
-            Bundle b=getIntent().getExtras();
-            id=b.getInt("id");
+        int id = 0;
+        if (getIntent().getExtras() != null) {
+            Bundle b = getIntent().getExtras();
+            id = b.getInt("id");
         }
         DB = new DBManger(EditRecipe.this);
-        recipe=DB.getOneRecipeByID(id);
+        recipe = DB.getOneRecipeByID(id);
 
         setContentView(R.layout.add_new_recipe);
         getIngreidentsName = (EditText) findViewById(R.id.getIngreidentsName);
@@ -50,10 +51,10 @@ public class EditRecipe extends AppCompatActivity {
         Delete.setVisibility(View.VISIBLE);
         Adding = (Button) findViewById(R.id.Add);
         save = (Button) findViewById(R.id.Save);
-        addedItems =(ListView) findViewById(R.id.VV);
+        addedItems = (ListView) findViewById(R.id.VV);
 
         IngredientsNames = new ArrayList<>();
-        for (Ingredients i : recipe.getIngredientsList()){
+        for (Ingredients i : recipe.getIngredientsList()) {
             IngredientsNames.add(i.getContent());
 
         }
@@ -72,6 +73,7 @@ public class EditRecipe extends AppCompatActivity {
         });
         onBtnClick();
     }
+
     public void onBtnClick() {
         Adding.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,13 +107,11 @@ public class EditRecipe extends AppCompatActivity {
         });
 
     }
-    private void DeleteRecipe(){
+
+    private void DeleteRecipe() {
         DB.deleteRecipe(recipe.getId());
         findViewById(R.id.button5).callOnClick();
     }
-
-
-
 
 
     public void Bakbtnn(View view) {
