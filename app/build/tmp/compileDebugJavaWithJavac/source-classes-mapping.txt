@@ -14,6 +14,10 @@ com/example/groupl/AllRecipeAdapter.java
  com.example.groupl.AllRecipeAdapter
  com.example.groupl.AllRecipeAdapter$1
  com.example.groupl.AllRecipeAdapter$ViewHolder
+com/example/groupl/AllRecipewithselectionAdapter.java
+ com.example.groupl.AllRecipewithselectionAdapter
+ com.example.groupl.AllRecipewithselectionAdapter$1
+ com.example.groupl.AllRecipewithselectionAdapter$ViewHolder
 com/example/groupl/Ingredients.java
  com.example.groupl.Ingredients
 com/example/groupl/ShowAllRecipes.java
@@ -24,6 +28,10 @@ com/example/groupl/DBManger.java
  com.example.groupl.DBManger
 com/example/groupl/MainActivity.java
  com.example.groupl.MainActivity
+com/example/groupl/AllPlanAdapter.java
+ com.example.groupl.AllPlanAdapter
+ com.example.groupl.AllPlanAdapter$1
+ com.example.groupl.AllPlanAdapter$ViewHolder
 com/example/groupl/AddNewRecipe.java
  com.example.groupl.AddNewRecipe
  com.example.groupl.AddNewRecipe$1
