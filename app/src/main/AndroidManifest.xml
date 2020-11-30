@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AllPlanAdapter"></activity>
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +20,7 @@
         <activity android:name=".ShowAllRecipes" />
         <activity android:name=".AddNewRecipe" />
         <activity android:name=".EditRecipe" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Addaplan" />
 
         <meta-data
