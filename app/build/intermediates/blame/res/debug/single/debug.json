@@ -4,12 +4,12 @@
         "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/layout_add_new_recipe.xml.flat",
         "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/layout/add_new_recipe.xml"
+    },
+    {
+        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_icon_background.png.flat",
@@ -52,16 +52,12 @@
         "source": "/Users/trevonsfiles/MealPlanner/app/build/generated/res/pngs/debug/drawable-ldpi/icon_background.png"
     },
     {
-        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/layout_row_two_plan.xml.flat",
-        "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/layout/row_two_plan.xml"
+        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/trevonsfiles/MealPlanner/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_android_black_24dp.xml.flat",
         "source": "/Users/trevonsfiles/MealPlanner/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_android_black_24dp.xml"
-    },
-    {
-        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/trevonsfiles/MealPlanner/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -230,6 +226,10 @@
     {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-v24_app.png.flat",
         "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/drawable-v24/app.png"
+    },
+    {
+        "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/layout_showplans.xml.flat",
+        "source": "/Users/trevonsfiles/MealPlanner/app/src/main/res/layout/showplans.xml"
     },
     {
         "merged": "/Users/trevonsfiles/MealPlanner/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_android_black_24dp.png.flat",

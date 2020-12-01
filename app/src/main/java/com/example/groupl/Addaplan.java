@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 public class Addaplan extends AppCompatActivity {
     private List<Recipe> allrecipes = new ArrayList<>();
     private List<Recipe> selectedrecipes = new ArrayList<>();
+    private List<Plan> allPlans = new ArrayList<>();
     EditText pName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,8 @@ public class Addaplan extends AppCompatActivity {
                 z.setPlanName(p_Name);
                 z.setRecipeList(selectedrecipes);
                 z.setDate(Calendar.getInstance().getTimeInMillis());
-                Db.inserNewPlan(z);
+                allPlans.add(z);
+                intent2.putExtra("PLANS", (Serializable) allPlans);
                 startActivity(intent2);
 
 

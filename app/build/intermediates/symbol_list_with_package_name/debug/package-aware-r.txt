@@ -1239,6 +1239,7 @@ id META
 id NO_DEBUG
 id SHIFT
 id SHOW_ALL
+id SHOW_ALL_plan
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
@@ -1304,6 +1305,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id anotherOne
 id asConfigured
 id async
 id auto
@@ -1331,7 +1333,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id checkBox1
 id checkbox
 id checked
 id chronometer
@@ -1339,7 +1340,6 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id container
-id container1
 id content
 id contentPanel
 id coordinator
@@ -1427,6 +1427,7 @@ id motion_base
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id namesP
 id nav_controller_view_tag
 id navigation_header_container
 id never
@@ -1455,9 +1456,7 @@ id progress_horizontal
 id radio
 id ratio
 id recipeDate
-id recipeDate1
 id recipeName
-id recipeName1
 id rectangles
 id reverseSawtooth
 id right
@@ -1533,6 +1532,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1647,10 +1647,10 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_one_recipe
-layout row_two_plan
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout showplans
 layout support_simple_spinner_dropdown_item
 layout test
 mipmap app

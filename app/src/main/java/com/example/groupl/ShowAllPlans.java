@@ -23,7 +23,8 @@ public class ShowAllPlans extends AppCompatActivity {
         AllPlanAdapter adapter= new AllPlanAdapter();
         AllPlans.setLayoutManager(new LinearLayoutManager(this));
         AllPlans.setAdapter(adapter);
-        all_Plans =Db.getAllPlanse();
+        Intent i = getIntent();
+        all_Plans = (List<Plan>) i.getSerializableExtra("PLANS");
         adapter.setDataList(all_Plans);
 
     }
