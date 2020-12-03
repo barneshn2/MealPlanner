@@ -1300,9 +1300,11 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_new_plan
 id alertTitle
 id aligned
 id all
+id allPlanse
 id always
 id animateToEnd
 id animateToStart
@@ -1319,13 +1321,10 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button
-id button2
 id button3
 id button4
 id button5
 id button6
-id button8
 id buttonPanel
 id calendarView
 id center
@@ -1455,6 +1454,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recipButton
 id recipeDate
 id recipeName
 id rectangles
