@@ -25,7 +25,7 @@ public class Recipe {
 
     public void setId(int id) {
         this.id = id;
-    }
+    }//set up
 
     public String getName() {
         return name;
