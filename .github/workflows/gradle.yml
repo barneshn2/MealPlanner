@@ -17,9 +17,9 @@ jobs:
     steps:
     - name: Send Push Notification
       uses: techulus/push-github-action@1.0.0
-       env:
-          API_KEY: ${{ f186dc73-db8f-4686-9c1d-ef9cd3618a27 }}
-          MESSAGE: "There is a new commit!"
+      env:
+        API_KEY: ${{ f186dc73-db8f-4686-9c1d-ef9cd3618a27 }}
+        MESSAGE: "There is a new commit!"
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
