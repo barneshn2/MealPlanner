@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Send Push Notification
+      uses: techulus/push-github-action@1.0.0
+       env:
+          API_KEY: ${{ secrets.API_KEY }}
+          MESSAGE: "There is a new commit!"
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
