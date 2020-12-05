@@ -171,18 +171,4 @@ fi
 
 exec "$JAVACMD" "$@"
 
-name: build
 
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Send Push Notification
-      uses: techulus/push-github-action@1.0.0
-      env:
-        API_KEY: ${{ f186dc73-db8f-4686-9c1d-ef9cd3618a27}}
-        MESSAGE: "Hey <Trevon lamb>, there's a new build"
