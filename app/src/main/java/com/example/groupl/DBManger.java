@@ -81,7 +81,6 @@ public class DBManger {
             cursor.moveToNext();
 
         }
-
         cursor.close();
 
         List<Recipe>retVaLList=new ArrayList<>();//
