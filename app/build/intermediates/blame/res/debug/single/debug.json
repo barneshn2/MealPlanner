@@ -36,6 +36,10 @@
         "source": "/Users/admin/MealPlanner18/app/src/main/res/mipmap-mdpi/icon_foreground.png"
     },
     {
+        "merged": "/Users/admin/MealPlanner18/app/build/intermediates/res/merged/debug/layout_calendar.xml.flat",
+        "source": "/Users/admin/MealPlanner18/app/src/main/res/layout/calendar.xml"
+    },
+    {
         "merged": "/Users/admin/MealPlanner18/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_food.png.flat",
         "source": "/Users/admin/MealPlanner18/app/build/generated/res/pngs/debug/drawable-ldpi/ic_food.png"
     },

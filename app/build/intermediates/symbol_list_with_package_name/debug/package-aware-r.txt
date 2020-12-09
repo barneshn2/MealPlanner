@@ -1327,6 +1327,7 @@ id button5
 id button6
 id buttonPanel
 id calendarView
+id calendarView2
 id center
 id center_horizontal
 id center_vertical
@@ -1622,6 +1623,7 @@ layout activity_main2
 layout activity_splash
 layout add_new_recipe
 layout addplan
+layout calendar
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
