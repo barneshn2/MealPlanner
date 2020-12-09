@@ -61,7 +61,7 @@ public class AllPlanAdapter extends RecyclerView.Adapter<AllPlanAdapter.ViewHold
             name=itemView.findViewById(R.id.recipeName);
             date=itemView.findViewById(R.id.recipeDate);
             container=itemView.findViewById(R.id.container);
-          //  deleView=itemView.findViewById(R.id.deletIcon);
+            deleView=itemView.findViewById(R.id.deletIcon);
 
 
         }
